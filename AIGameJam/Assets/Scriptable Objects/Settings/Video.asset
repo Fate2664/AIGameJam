@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d686629ec55324f8458bae419120d4, type: 3}
+  m_Name: Video
+  m_EditorClassIdentifier: Assembly-CSharp::SettingsCollection
+  Category: Video
+  Settings:
+  - rid: 8727705807933669445
+  - rid: 8727705807933669446
+  - rid: 5843491539921141899
+  references:
+    version: 2
+    RefIds:
+    - rid: 5843491539921141899
+      type: {class: BoolSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Particle Effects Enabled
+        Name: Particle Effects Enabled
+        Order: 0
+        DefaultState: 1
+        Type: 1
+    - rid: 8727705807933669445
+      type: {class: StepperSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Graphics Preset
+        Name: Graphics Preset
+        Order: 1
+        Type: 1
+        Options:
+        - Low
+        - Medium
+        - High
+        - Epic
+        DefaultIndex: 2
+    - rid: 8727705807933669446
+      type: {class: StepperSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Render Mode
+        Name: Render Mode
+        Order: 2
+        Type: 1
+        Options:
+        - Windowed
+        - Windowed Borderless
+        - Fullscreen
+        DefaultIndex: 2

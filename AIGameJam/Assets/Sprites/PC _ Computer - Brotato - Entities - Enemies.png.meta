@@ -1,0 +1,4693 @@
+fileFormatVersion: 2
+guid: 14d64f5ca36cf7540bea17391317fdce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1477352331906036383
+    second: PC _ Computer - Brotato - Entities - Enemies_0
+  - first:
+      213: -8993176557342647669
+    second: PC _ Computer - Brotato - Entities - Enemies_1
+  - first:
+      213: -207702127201095357
+    second: PC _ Computer - Brotato - Entities - Enemies_2
+  - first:
+      213: -4501924081602052567
+    second: PC _ Computer - Brotato - Entities - Enemies_3
+  - first:
+      213: -7468743379301478219
+    second: PC _ Computer - Brotato - Entities - Enemies_4
+  - first:
+      213: 7966603677428121308
+    second: PC _ Computer - Brotato - Entities - Enemies_5
+  - first:
+      213: -775568071663031757
+    second: PC _ Computer - Brotato - Entities - Enemies_6
+  - first:
+      213: 796961735803532467
+    second: PC _ Computer - Brotato - Entities - Enemies_7
+  - first:
+      213: 2653277979418313194
+    second: PC _ Computer - Brotato - Entities - Enemies_8
+  - first:
+      213: -1084184451218909260
+    second: PC _ Computer - Brotato - Entities - Enemies_9
+  - first:
+      213: 6995752287986722886
+    second: PC _ Computer - Brotato - Entities - Enemies_10
+  - first:
+      213: -7639510287343580664
+    second: PC _ Computer - Brotato - Entities - Enemies_11
+  - first:
+      213: -2190558595030516504
+    second: PC _ Computer - Brotato - Entities - Enemies_12
+  - first:
+      213: -7208720131837172998
+    second: PC _ Computer - Brotato - Entities - Enemies_13
+  - first:
+      213: -7741405891430995698
+    second: PC _ Computer - Brotato - Entities - Enemies_14
+  - first:
+      213: -3741765070811299196
+    second: PC _ Computer - Brotato - Entities - Enemies_15
+  - first:
+      213: 3160474500147468842
+    second: PC _ Computer - Brotato - Entities - Enemies_16
+  - first:
+      213: -1212614419447291431
+    second: PC _ Computer - Brotato - Entities - Enemies_17
+  - first:
+      213: 5209135523860545054
+    second: PC _ Computer - Brotato - Entities - Enemies_18
+  - first:
+      213: -403696222143032925
+    second: PC _ Computer - Brotato - Entities - Enemies_19
+  - first:
+      213: -862693671691637352
+    second: PC _ Computer - Brotato - Entities - Enemies_20
+  - first:
+      213: -5119020881386425189
+    second: PC _ Computer - Brotato - Entities - Enemies_21
+  - first:
+      213: -8199082397563641008
+    second: PC _ Computer - Brotato - Entities - Enemies_22
+  - first:
+      213: 1535550565148621426
+    second: PC _ Computer - Brotato - Entities - Enemies_23
+  - first:
+      213: -6841167365968086531
+    second: PC _ Computer - Brotato - Entities - Enemies_24
+  - first:
+      213: -4925112212909802205
+    second: PC _ Computer - Brotato - Entities - Enemies_25
+  - first:
+      213: -7526710672865071756
+    second: PC _ Computer - Brotato - Entities - Enemies_26
+  - first:
+      213: 4865246216394405963
+    second: PC _ Computer - Brotato - Entities - Enemies_27
+  - first:
+      213: 3172469884770490308
+    second: PC _ Computer - Brotato - Entities - Enemies_28
+  - first:
+      213: -5876626281454943024
+    second: PC _ Computer - Brotato - Entities - Enemies_29
+  - first:
+      213: 2660215129271931664
+    second: PC _ Computer - Brotato - Entities - Enemies_30
+  - first:
+      213: 7990809591931430713
+    second: PC _ Computer - Brotato - Entities - Enemies_31
+  - first:
+      213: -2719420576282331713
+    second: PC _ Computer - Brotato - Entities - Enemies_32
+  - first:
+      213: 2511337676404685767
+    second: PC _ Computer - Brotato - Entities - Enemies_33
+  - first:
+      213: 4235708860960935087
+    second: PC _ Computer - Brotato - Entities - Enemies_34
+  - first:
+      213: -8945267031804886257
+    second: PC _ Computer - Brotato - Entities - Enemies_35
+  - first:
+      213: -8755937844206368894
+    second: PC _ Computer - Brotato - Entities - Enemies_36
+  - first:
+      213: 8041844351376215243
+    second: PC _ Computer - Brotato - Entities - Enemies_37
+  - first:
+      213: 824600878850719149
+    second: PC _ Computer - Brotato - Entities - Enemies_38
+  - first:
+      213: -8209631964867662626
+    second: PC _ Computer - Brotato - Entities - Enemies_39
+  - first:
+      213: -503145253092734861
+    second: PC _ Computer - Brotato - Entities - Enemies_40
+  - first:
+      213: 8893577583653545122
+    second: PC _ Computer - Brotato - Entities - Enemies_41
+  - first:
+      213: 1279249864181081154
+    second: PC _ Computer - Brotato - Entities - Enemies_42
+  - first:
+      213: -3908565818197851202
+    second: PC _ Computer - Brotato - Entities - Enemies_43
+  - first:
+      213: -1479157415801303109
+    second: PC _ Computer - Brotato - Entities - Enemies_44
+  - first:
+      213: 6456720122381334547
+    second: PC _ Computer - Brotato - Entities - Enemies_45
+  - first:
+      213: -3496953475162243435
+    second: PC _ Computer - Brotato - Entities - Enemies_46
+  - first:
+      213: -6352391373726427647
+    second: PC _ Computer - Brotato - Entities - Enemies_47
+  - first:
+      213: -5101898123878472556
+    second: PC _ Computer - Brotato - Entities - Enemies_48
+  - first:
+      213: 1717461522480105280
+    second: PC _ Computer - Brotato - Entities - Enemies_49
+  - first:
+      213: -3234041416429687034
+    second: PC _ Computer - Brotato - Entities - Enemies_50
+  - first:
+      213: 2314942004518734426
+    second: PC _ Computer - Brotato - Entities - Enemies_51
+  - first:
+      213: 1971489920470635241
+    second: PC _ Computer - Brotato - Entities - Enemies_52
+  - first:
+      213: -4190995863014055430
+    second: PC _ Computer - Brotato - Entities - Enemies_53
+  - first:
+      213: 3107490110968498116
+    second: PC _ Computer - Brotato - Entities - Enemies_54
+  - first:
+      213: 6788782533263586931
+    second: PC _ Computer - Brotato - Entities - Enemies_55
+  - first:
+      213: 8092881700077243172
+    second: PC _ Computer - Brotato - Entities - Enemies_56
+  - first:
+      213: -1841614877853790903
+    second: PC _ Computer - Brotato - Entities - Enemies_57
+  - first:
+      213: -78086325237586671
+    second: PC _ Computer - Brotato - Entities - Enemies_58
+  - first:
+      213: -1710743718835338727
+    second: PC _ Computer - Brotato - Entities - Enemies_59
+  - first:
+      213: 9101227427151878661
+    second: PC _ Computer - Brotato - Entities - Enemies_60
+  - first:
+      213: 8276266587576731781
+    second: PC _ Computer - Brotato - Entities - Enemies_61
+  - first:
+      213: -1158064101661754912
+    second: PC _ Computer - Brotato - Entities - Enemies_62
+  - first:
+      213: -6594117338637365081
+    second: PC _ Computer - Brotato - Entities - Enemies_63
+  - first:
+      213: 65830331218112517
+    second: PC _ Computer - Brotato - Entities - Enemies_64
+  - first:
+      213: -3566521497518375217
+    second: PC _ Computer - Brotato - Entities - Enemies_65
+  - first:
+      213: -8641694926070557868
+    second: PC _ Computer - Brotato - Entities - Enemies_66
+  - first:
+      213: -9201588529125632710
+    second: PC _ Computer - Brotato - Entities - Enemies_67
+  - first:
+      213: -5129167280679353234
+    second: PC _ Computer - Brotato - Entities - Enemies_68
+  - first:
+      213: -1246232278906406122
+    second: PC _ Computer - Brotato - Entities - Enemies_69
+  - first:
+      213: 30250151910613898
+    second: PC _ Computer - Brotato - Entities - Enemies_70
+  - first:
+      213: 4709981640997939127
+    second: PC _ Computer - Brotato - Entities - Enemies_71
+  - first:
+      213: -446732738179184217
+    second: PC _ Computer - Brotato - Entities - Enemies_72
+  - first:
+      213: -345981624279825310
+    second: PC _ Computer - Brotato - Entities - Enemies_73
+  - first:
+      213: -2097182643694936744
+    second: PC _ Computer - Brotato - Entities - Enemies_74
+  - first:
+      213: 550318299071463826
+    second: PC _ Computer - Brotato - Entities - Enemies_75
+  - first:
+      213: -2940481690531828027
+    second: PC _ Computer - Brotato - Entities - Enemies_76
+  - first:
+      213: 4828433876605060848
+    second: PC _ Computer - Brotato - Entities - Enemies_77
+  - first:
+      213: -550143262098769308
+    second: PC _ Computer - Brotato - Entities - Enemies_78
+  - first:
+      213: 2548609202905388237
+    second: PC _ Computer - Brotato - Entities - Enemies_79
+  - first:
+      213: -292520293786591630
+    second: PC _ Computer - Brotato - Entities - Enemies_80
+  - first:
+      213: -4827811796799413804
+    second: PC _ Computer - Brotato - Entities - Enemies_81
+  - first:
+      213: 4283065741629275046
+    second: PC _ Computer - Brotato - Entities - Enemies_82
+  - first:
+      213: -4230374440854336842
+    second: PC _ Computer - Brotato - Entities - Enemies_83
+  - first:
+      213: 9112177701253644907
+    second: PC _ Computer - Brotato - Entities - Enemies_84
+  - first:
+      213: 8008440808776551646
+    second: PC _ Computer - Brotato - Entities - Enemies_85
+  - first:
+      213: -1532683533480602912
+    second: PC _ Computer - Brotato - Entities - Enemies_86
+  - first:
+      213: -126679361788015672
+    second: PC _ Computer - Brotato - Entities - Enemies_87
+  - first:
+      213: -1647829448087039634
+    second: PC _ Computer - Brotato - Entities - Enemies_88
+  - first:
+      213: 1666711421568876722
+    second: PC _ Computer - Brotato - Entities - Enemies_89
+  - first:
+      213: 3047409693047872745
+    second: PC _ Computer - Brotato - Entities - Enemies_90
+  - first:
+      213: -856608876678155832
+    second: PC _ Computer - Brotato - Entities - Enemies_91
+  - first:
+      213: 4736682353786674285
+    second: PC _ Computer - Brotato - Entities - Enemies_92
+  - first:
+      213: 8572179947929183323
+    second: PC _ Computer - Brotato - Entities - Enemies_93
+  - first:
+      213: 6292408694430997232
+    second: PC _ Computer - Brotato - Entities - Enemies_94
+  - first:
+      213: -2912615121869327113
+    second: PC _ Computer - Brotato - Entities - Enemies_95
+  - first:
+      213: 350106069643823537
+    second: PC _ Computer - Brotato - Entities - Enemies_96
+  - first:
+      213: 1419099607904616216
+    second: PC _ Computer - Brotato - Entities - Enemies_97
+  - first:
+      213: -2688390172712578295
+    second: PC _ Computer - Brotato - Entities - Enemies_98
+  - first:
+      213: -3849253057095827346
+    second: PC _ Computer - Brotato - Entities - Enemies_99
+  - first:
+      213: 9080426177450708798
+    second: PC _ Computer - Brotato - Entities - Enemies_100
+  - first:
+      213: -8665805428349411558
+    second: PC _ Computer - Brotato - Entities - Enemies_101
+  - first:
+      213: -2204482460295565685
+    second: PC _ Computer - Brotato - Entities - Enemies_102
+  - first:
+      213: 7414260746676257266
+    second: PC _ Computer - Brotato - Entities - Enemies_103
+  - first:
+      213: 3920491811139562565
+    second: PC _ Computer - Brotato - Entities - Enemies_104
+  - first:
+      213: -6264935077870120227
+    second: PC _ Computer - Brotato - Entities - Enemies_105
+  - first:
+      213: 2607506968105194675
+    second: PC _ Computer - Brotato - Entities - Enemies_106
+  - first:
+      213: -8293272619494279025
+    second: PC _ Computer - Brotato - Entities - Enemies_107
+  - first:
+      213: 4643976687444893901
+    second: PC _ Computer - Brotato - Entities - Enemies_108
+  - first:
+      213: -4132623370922989072
+    second: PC _ Computer - Brotato - Entities - Enemies_109
+  - first:
+      213: 8741058562577166343
+    second: PC _ Computer - Brotato - Entities - Enemies_110
+  - first:
+      213: -6682678191256745307
+    second: PC _ Computer - Brotato - Entities - Enemies_111
+  - first:
+      213: -497819932976976322
+    second: PC _ Computer - Brotato - Entities - Enemies_112
+  - first:
+      213: 7582649256593172859
+    second: PC _ Computer - Brotato - Entities - Enemies_113
+  - first:
+      213: -890081557014504572
+    second: PC _ Computer - Brotato - Entities - Enemies_114
+  - first:
+      213: 6343906874573887832
+    second: PC _ Computer - Brotato - Entities - Enemies_115
+  - first:
+      213: 7148074987853676276
+    second: PC _ Computer - Brotato - Entities - Enemies_116
+  - first:
+      213: 6173178408693014456
+    second: PC _ Computer - Brotato - Entities - Enemies_117
+  - first:
+      213: 2640117170746030666
+    second: PC _ Computer - Brotato - Entities - Enemies_118
+  - first:
+      213: -583305381670911387
+    second: PC _ Computer - Brotato - Entities - Enemies_119
+  - first:
+      213: -4015449194035029924
+    second: PC _ Computer - Brotato - Entities - Enemies_120
+  - first:
+      213: 8901443882674185264
+    second: PC _ Computer - Brotato - Entities - Enemies_121
+  - first:
+      213: 6896954484968180264
+    second: PC _ Computer - Brotato - Entities - Enemies_122
+  - first:
+      213: 4897243136262369594
+    second: PC _ Computer - Brotato - Entities - Enemies_123
+  - first:
+      213: -4104203097740104010
+    second: PC _ Computer - Brotato - Entities - Enemies_124
+  - first:
+      213: 5508439852720363112
+    second: PC _ Computer - Brotato - Entities - Enemies_125
+  - first:
+      213: 5024847483002829495
+    second: PC _ Computer - Brotato - Entities - Enemies_126
+  - first:
+      213: 2911801154884942064
+    second: PC _ Computer - Brotato - Entities - Enemies_127
+  - first:
+      213: 4328483210547585275
+    second: PC _ Computer - Brotato - Entities - Enemies_128
+  - first:
+      213: 4258450868751165197
+    second: PC _ Computer - Brotato - Entities - Enemies_129
+  - first:
+      213: -3711015644629354990
+    second: PC _ Computer - Brotato - Entities - Enemies_130
+  - first:
+      213: -417767454341842136
+    second: PC _ Computer - Brotato - Entities - Enemies_131
+  - first:
+      213: -8270605021263667511
+    second: PC _ Computer - Brotato - Entities - Enemies_132
+  - first:
+      213: 7433804850033517275
+    second: PC _ Computer - Brotato - Entities - Enemies_133
+  - first:
+      213: 4688943246444425809
+    second: PC _ Computer - Brotato - Entities - Enemies_134
+  - first:
+      213: -4733098050798618182
+    second: PC _ Computer - Brotato - Entities - Enemies_135
+  - first:
+      213: 197010779201541139
+    second: PC _ Computer - Brotato - Entities - Enemies_136
+  - first:
+      213: 344174244634945886
+    second: PC _ Computer - Brotato - Entities - Enemies_137
+  - first:
+      213: -3789398340841167812
+    second: PC _ Computer - Brotato - Entities - Enemies_138
+  - first:
+      213: -1059292925502360148
+    second: PC _ Computer - Brotato - Entities - Enemies_139
+  - first:
+      213: -8137458875197372757
+    second: PC _ Computer - Brotato - Entities - Enemies_140
+  - first:
+      213: 7078029463647938992
+    second: PC _ Computer - Brotato - Entities - Enemies_141
+  - first:
+      213: 3227936220763004257
+    second: PC _ Computer - Brotato - Entities - Enemies_142
+  - first:
+      213: 1573945267026730836
+    second: PC _ Computer - Brotato - Entities - Enemies_143
+  - first:
+      213: -5967861874411591654
+    second: PC _ Computer - Brotato - Entities - Enemies_144
+  - first:
+      213: 8835471169631991311
+    second: PC _ Computer - Brotato - Entities - Enemies_145
+  - first:
+      213: -6507693824237244824
+    second: PC _ Computer - Brotato - Entities - Enemies_146
+  - first:
+      213: -81756575367332213
+    second: PC _ Computer - Brotato - Entities - Enemies_147
+  - first:
+      213: 4280366841154957936
+    second: PC _ Computer - Brotato - Entities - Enemies_148
+  - first:
+      213: -4530665489086595446
+    second: PC _ Computer - Brotato - Entities - Enemies_149
+  - first:
+      213: 1115042718197905954
+    second: PC _ Computer - Brotato - Entities - Enemies_150
+  - first:
+      213: -621247091610154165
+    second: PC _ Computer - Brotato - Entities - Enemies_151
+  - first:
+      213: -2206053719499255460
+    second: PC _ Computer - Brotato - Entities - Enemies_152
+  - first:
+      213: 5938653886088984982
+    second: PC _ Computer - Brotato - Entities - Enemies_153
+  - first:
+      213: -6397306462861720052
+    second: PC _ Computer - Brotato - Entities - Enemies_154
+  - first:
+      213: 6576095473714324663
+    second: PC _ Computer - Brotato - Entities - Enemies_155
+  - first:
+      213: -2204370383343149653
+    second: PC _ Computer - Brotato - Entities - Enemies_156
+  - first:
+      213: 1576860549046501899
+    second: PC _ Computer - Brotato - Entities - Enemies_157
+  - first:
+      213: -5772817986655953373
+    second: PC _ Computer - Brotato - Entities - Enemies_158
+  - first:
+      213: -2394086101902402261
+    second: PC _ Computer - Brotato - Entities - Enemies_159
+  - first:
+      213: 3350151612445791392
+    second: PC _ Computer - Brotato - Entities - Enemies_160
+  - first:
+      213: 7547986798919844719
+    second: PC _ Computer - Brotato - Entities - Enemies_161
+  - first:
+      213: -7324796949958812790
+    second: PC _ Computer - Brotato - Entities - Enemies_162
+  - first:
+      213: -5416171732254036087
+    second: PC _ Computer - Brotato - Entities - Enemies_163
+  - first:
+      213: 495873546378656760
+    second: PC _ Computer - Brotato - Entities - Enemies_164
+  - first:
+      213: -6435476827725832902
+    second: PC _ Computer - Brotato - Entities - Enemies_165
+  - first:
+      213: -4763892963579616955
+    second: PC _ Computer - Brotato - Entities - Enemies_166
+  - first:
+      213: -1870929271862521639
+    second: PC _ Computer - Brotato - Entities - Enemies_167
+  - first:
+      213: 410553062701275786
+    second: PC _ Computer - Brotato - Entities - Enemies_168
+  - first:
+      213: 4771945241899317144
+    second: PC _ Computer - Brotato - Entities - Enemies_169
+  - first:
+      213: 1179297492490987338
+    second: PC _ Computer - Brotato - Entities - Enemies_170
+  - first:
+      213: -2546142433055562277
+    second: PC _ Computer - Brotato - Entities - Enemies_171
+  - first:
+      213: 6158900286431539182
+    second: PC _ Computer - Brotato - Entities - Enemies_172
+  - first:
+      213: -6486980470235145809
+    second: PC _ Computer - Brotato - Entities - Enemies_173
+  - first:
+      213: -6503801175883809376
+    second: PC _ Computer - Brotato - Entities - Enemies_174
+  - first:
+      213: -8796143244991639562
+    second: PC _ Computer - Brotato - Entities - Enemies_175
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1383
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d45a8a1e36f7be0800000000000000
+      internalID: -1477352331906036383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_1
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1307
+        width: 200
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a9839a191d13380800000000000000
+      internalID: -8993176557342647669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_2
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1309
+        width: 219
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 341f51904081e1df0800000000000000
+      internalID: -207702127201095357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_3
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1387
+        width: 90
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92e355666e3f581c0800000000000000
+      internalID: -4501924081602052567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_4
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 1379
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b05f26b771b95890800000000000000
+      internalID: -7468743379301478219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_5
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 1373
+        width: 95
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde7c63f5df0f8e60800000000000000
+      internalID: 7966603677428121308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_6
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1122
+        width: 88
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33ae36da2f0ac35f0800000000000000
+      internalID: -775568071663031757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_7
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1099
+        width: 136
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4f52ae9706f0b00800000000000000
+      internalID: 796961735803532467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_8
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1122
+        width: 79
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae1489db34652d420800000000000000
+      internalID: 2653277979418313194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_9
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1091
+        width: 142
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b758126cf334f0f0800000000000000
+      internalID: -1084184451218909260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_10
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1123
+        width: 89
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648231e04a7e51160800000000000000
+      internalID: 6995752287986722886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_11
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1122
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a81f89ed10bf590800000000000000
+      internalID: -7639510287343580664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_12
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 800
+        width: 166
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ecf68b50929991e0800000000000000
+      internalID: -2190558595030516504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_13
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 789
+        width: 193
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af263a8cb3b75fb90800000000000000
+      internalID: -7208720131837172998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_14
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 789
+        width: 155
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e09a3238b50019490800000000000000
+      internalID: -7741405891430995698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_15
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 867
+        width: 73
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48204592e74921cc0800000000000000
+      internalID: -3741765070811299196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_16
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 831
+        width: 181
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a58fe10d24cdb20800000000000000
+      internalID: 3160474500147468842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_17
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 844
+        width: 90
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d1e3573c9deb2fe0800000000000000
+      internalID: -1212614419447291431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_18
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 589
+        width: 95
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e7396e8219a4840800000000000000
+      internalID: 5209135523860545054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_19
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 529
+        width: 184
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a15ff1cc68c56af0800000000000000
+      internalID: -403696222143032925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_20
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 544
+        width: 128
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89da7d42da81704f0800000000000000
+      internalID: -862693671691637352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_21
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 602
+        width: 85
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b94b72f41a595f8b0800000000000000
+      internalID: -5119020881386425189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_22
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 533
+        width: 207
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053af010002073e80800000000000000
+      internalID: -8199082397563641008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_23
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 540
+        width: 199
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a75527a1f5f4510800000000000000
+      internalID: 1535550565148621426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_24
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 288
+        width: 203
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df93a76d68a4f01a0800000000000000
+      internalID: -6841167365968086531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_25
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 343
+        width: 89
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32db296698c76abb0800000000000000
+      internalID: -4925112212909802205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_26
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 334
+        width: 98
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d6cb07580cb8790800000000000000
+      internalID: -7526710672865071756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_27
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 311
+        width: 123
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48700918a3d48340800000000000000
+      internalID: 4865246216394405963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_28
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 340
+        width: 89
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c79e5e3d80e60c20800000000000000
+      internalID: 3172469884770490308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_29
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 354
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d447206887027ea0800000000000000
+      internalID: -5876626281454943024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_30
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 321
+        width: 79
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0139f5ec09bfae420800000000000000
+      internalID: 2660215129271931664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_31
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 207
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9376bda9cfe05ee60800000000000000
+      internalID: 7990809591931430713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_32
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 207
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5bdcbd46da24ad0800000000000000
+      internalID: -2719420576282331713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_33
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 207
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cbf721af401ad220800000000000000
+      internalID: 2511337676404685767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_34
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 207
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac0d8d64c248ca30800000000000000
+      internalID: 4235708860960935087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_35
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 207
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f03c14457070cd380800000000000000
+      internalID: -8945267031804886257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_36
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 207
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2870ea0fbe8ac7680800000000000000
+      internalID: -8755937844206368894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_37
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 207
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bccc2ce74de5a9f60800000000000000
+      internalID: 8041844351376215243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_38
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 227
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad3f516122917b00800000000000000
+      internalID: 824600878850719149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_39
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 207
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcee557937811e80800000000000000
+      internalID: -8209631964867662626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_40
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 207
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 378cbfede087409f0800000000000000
+      internalID: -503145253092734861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_41
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 207
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4eb0031b55c6b70800000000000000
+      internalID: 8893577583653545122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_42
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 207
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244ea7549fec0c110800000000000000
+      internalID: 1279249864181081154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_43
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 207
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb34519c81cf1c9c0800000000000000
+      internalID: -3908565818197851202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_44
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 207
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf4740da2af87be0800000000000000
+      internalID: -1479157415801303109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_45
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 207
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 318f7acfdb0ea9950800000000000000
+      internalID: 6456720122381334547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_46
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 207
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ef2ec8753587fc0800000000000000
+      internalID: -3496953475162243435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_47
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 207
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106d7c6b3b5c7d7a0800000000000000
+      internalID: -6352391373726427647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_48
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 207
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 494edf5ffaa6239b0800000000000000
+      internalID: -5101898123878472556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_49
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 207
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04704dab726a5d710800000000000000
+      internalID: 1717461522480105280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_50
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 207
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60faec867706e13d0800000000000000
+      internalID: -3234041416429687034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_51
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 207
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a48feec73502020800000000000000
+      internalID: 2314942004518734426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_52
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 200
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e25ae323a32c5b10800000000000000
+      internalID: 1971489920470635241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_53
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 227
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af16ae9a77796d5c0800000000000000
+      internalID: -4190995863014055430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_54
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 207
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c7015faac5002b20800000000000000
+      internalID: 3107490110968498116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_55
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 207
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3767d88deb9963e50800000000000000
+      internalID: 6788782533263586931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_56
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 207
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b0d5e3701bf4070800000000000000
+      internalID: 8092881700077243172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_57
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 207
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94d4370a6054176e0800000000000000
+      internalID: -1841614877853790903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_58
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 207
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 115e562a6e49aeef0800000000000000
+      internalID: -78086325237586671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_59
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 207
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 912c611d6a73248e0800000000000000
+      internalID: -1710743718835338727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_60
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 207
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a1e67ef1e0e4e70800000000000000
+      internalID: 9101227427151878661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_61
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 207
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58802f2ac943bd270800000000000000
+      internalID: 8276266587576731781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_62
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 227
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9b151d5dabdefe0800000000000000
+      internalID: -1158064101661754912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_63
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 207
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a09647b73dfc74a0800000000000000
+      internalID: -6594117338637365081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_64
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 207
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500b3b36650e9e000800000000000000
+      internalID: 65830331218112517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_65
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 207
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce7f90289b218ec0800000000000000
+      internalID: -3566521497518375217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_66
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 207
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 453d44a1048821880800000000000000
+      internalID: -8641694926070557868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_67
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 207
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3558202cf36d4080800000000000000
+      internalID: -9201588529125632710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_68
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 207
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e640d81a88981d8b0800000000000000
+      internalID: -5129167280679353234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_69
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 207
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61b782c585e74bee0800000000000000
+      internalID: -1246232278906406122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_70
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 227
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83a8075a587b6000800000000000000
+      internalID: 30250151910613898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_71
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 207
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b72b4219573d5140800000000000000
+      internalID: 4709981640997939127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_72
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 200
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a9ca4701f2ecc9f0800000000000000
+      internalID: -446732738179184217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_73
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 227
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2640df9bb83d23bf0800000000000000
+      internalID: -345981624279825310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_74
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 207
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85dd2753f7f45e2e0800000000000000
+      internalID: -2097182643694936744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_75
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 207
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2914d89c39f13a700800000000000000
+      internalID: 550318299071463826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_76
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 207
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce6f475b7f4137d0800000000000000
+      internalID: -2940481690531828027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_77
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 207
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f6c184570b020340800000000000000
+      internalID: 4828433876605060848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_78
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 207
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a370f2e9f7d58f0800000000000000
+      internalID: -550143262098769308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_79
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 227
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc49772219a7e5320800000000000000
+      internalID: 2548609202905388237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_80
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 207
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ed147b752c0fbf0800000000000000
+      internalID: -292520293786591630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_81
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 207
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d1a459efba200db0800000000000000
+      internalID: -4827811796799413804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_82
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 207
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab357f6991807b30800000000000000
+      internalID: 4283065741629275046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_83
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 207
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba4cf90cd0ba45c0800000000000000
+      internalID: -4230374440854336842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_84
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 207
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6285754755f47e70800000000000000
+      internalID: 9112177701253644907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_85
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 207
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc4edb2c72b32f60800000000000000
+      internalID: 8008440808776551646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_86
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 207
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e25cc16270dabae0800000000000000
+      internalID: -1532683533480602912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_87
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 203
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb8048aac1fd3ef0800000000000000
+      internalID: -126679361788015672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_88
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 167
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e611858f8dbb129e0800000000000000
+      internalID: -1647829448087039634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_89
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 167
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b003b11539512710800000000000000
+      internalID: 1666711421568876722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_90
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 167
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec533f48f29a4a20800000000000000
+      internalID: 3047409693047872745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_91
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 167
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c1f622e3c6bc14f0800000000000000
+      internalID: -856608876678155832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_92
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 167
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6cd05731831cb140800000000000000
+      internalID: 4736682353786674285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_93
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 167
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b54ab0bce3086f670800000000000000
+      internalID: 8572179947929183323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_94
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 167
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa93257e50235750800000000000000
+      internalID: 6292408694430997232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_95
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 187
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f43c857aff4497d0800000000000000
+      internalID: -2912615121869327113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_96
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 167
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b904da8d93dbd400800000000000000
+      internalID: 350106069643823537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_97
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 160
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ffc0e1397a1b310800000000000000
+      internalID: 1419099607904616216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_98
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 167
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 903d0d1b16be0bad0800000000000000
+      internalID: -2688390172712578295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_99
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 167
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6087312db4b49ac0800000000000000
+      internalID: -3849253057095827346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_100
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 167
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f8b1c8f77240e70800000000000000
+      internalID: 9080426177450708798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_101
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 167
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1fd49650efdcb780800000000000000
+      internalID: -8665805428349411558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_102
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 167
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ee088d1ea1861e0800000000000000
+      internalID: -2204482460295565685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_103
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 167
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1c2cddddeb4e660800000000000000
+      internalID: 7414260746676257266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_104
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 167
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c2dc3d782686630800000000000000
+      internalID: 3920491811139562565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_105
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 167
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2daae5dba7e09a0800000000000000
+      internalID: -6264935077870120227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_106
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 161
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b41447b5c9bf2420800000000000000
+      internalID: 2607506968105194675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_107
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 167
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f88f1910e7068ec80800000000000000
+      internalID: -8293272619494279025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_108
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 167
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc029504138b27040800000000000000
+      internalID: 4643976687444893901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_109
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 167
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f968a190f8f5a6c0800000000000000
+      internalID: -4132623370922989072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_110
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 167
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7007c47537a7e4970800000000000000
+      internalID: 8741058562577166343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_111
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 167
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa44e5679b5243a0800000000000000
+      internalID: -6682678191256745307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_112
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 167
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e6cc498636719f0800000000000000
+      internalID: -497819932976976322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_113
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 167
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b79ad93035bfa3960800000000000000
+      internalID: 7582649256593172859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_114
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 167
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b160d2a8bc5a3f0800000000000000
+      internalID: -890081557014504572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_115
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 82
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8599223e0b51a0850800000000000000
+      internalID: 6343906874573887832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_116
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 174
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fe7fde4450133360800000000000000
+      internalID: 7148074987853676276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_117
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 174
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf12494e098ba550800000000000000
+      internalID: 6173178408693014456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_118
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 174
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4af9bf249493a420800000000000000
+      internalID: 2640117170746030666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_119
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 174
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5628ee988dea7e7f0800000000000000
+      internalID: -583305381670911387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_120
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 167
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c58d9e79b324648c0800000000000000
+      internalID: -4015449194035029924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_121
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 73
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0346ed6ac08488b70800000000000000
+      internalID: 8901443882674185264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_122
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 72
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82ac09cff87e6bf50800000000000000
+      internalID: 6896954484968180264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_123
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 72
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3173ab8fa086f340800000000000000
+      internalID: 4897243136262369594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_124
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 72
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bea4211701fa07c0800000000000000
+      internalID: -4104203097740104010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_125
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 72
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86690007cd8e17c40800000000000000
+      internalID: 5508439852720363112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_126
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 72
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba36eab928dbb540800000000000000
+      internalID: 5024847483002829495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_127
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 73
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f83d7519bbc86820800000000000000
+      internalID: 2911801154884942064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_128
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 101
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf06ee4fb8cd11c30800000000000000
+      internalID: 4328483210547585275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_129
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 73
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07ed5db08e091b30800000000000000
+      internalID: 4258450868751165197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_130
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 64
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21633f9dee2df7cc0800000000000000
+      internalID: -3711015644629354990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_131
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 64
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b3c35b6bac33af0800000000000000
+      internalID: -417767454341842136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_132
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 72
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce540e7d88e83d80800000000000000
+      internalID: -8270605021263667511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_133
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 72
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd2e2d7002e2a2760800000000000000
+      internalID: 7433804850033517275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_134
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 72
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15279402a09721140800000000000000
+      internalID: 4688943246444425809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_135
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 63
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9fd0b5668a05eb0800000000000000
+      internalID: -4733098050798618182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_136
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 73
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3141b37824cebb200800000000000000
+      internalID: 197010779201541139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_137
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 72
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59ed48e6a0c6c400800000000000000
+      internalID: 344174244634945886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_138
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 73
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3425bd394a596bc0800000000000000
+      internalID: -3789398340841167812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_139
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 72
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5f85652b2ac41f0800000000000000
+      internalID: -1059292925502360148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_140
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 72
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba6c2816440f11f80800000000000000
+      internalID: -8137458875197372757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_141
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 73
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b9eb72db463a3260800000000000000
+      internalID: 7078029463647938992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_142
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 72
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d1234f3eeebcc20800000000000000
+      internalID: 3227936220763004257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_143
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 72
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f190991e6c7d510800000000000000
+      internalID: 1573945267026730836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_144
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 101
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a18a91b8e35ed2da0800000000000000
+      internalID: -5967861874411591654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_145
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 73
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f06be196736ed9a70800000000000000
+      internalID: 8835471169631991311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_146
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 72
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ee55332f600b5a0800000000000000
+      internalID: -6507693824237244824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_147
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 18
+        width: 10
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e7d2fe3da8ddef0800000000000000
+      internalID: -81756575367332213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_148
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 18
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 072f663b6fae66b30800000000000000
+      internalID: 4280366841154957936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_149
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 17
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e3fdefdb7df11c0800000000000000
+      internalID: -4530665489086595446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_150
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 17
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a7297c17d697f00800000000000000
+      internalID: 1115042718197905954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_151
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 17
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4b05dacf03e067f0800000000000000
+      internalID: -621247091610154165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_152
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 17
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5151dd84d58261e0800000000000000
+      internalID: -2206053719499255460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_153
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 8
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 699b35cbe365a6250800000000000000
+      internalID: 5938653886088984982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_154
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 46
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0601d99aa33837a0800000000000000
+      internalID: -6397306462861720052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_155
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 18
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b4ebcfddfbf24b50800000000000000
+      internalID: 6576095473714324663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_156
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 17
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad907bc0d08861e0800000000000000
+      internalID: -2204370383343149653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_157
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 17
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b028e36905222e510800000000000000
+      internalID: 1576860549046501899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_158
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 17
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ed26870a4d2efa0800000000000000
+      internalID: -5772817986655953373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_159
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 18
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2d586eef5f76ced0800000000000000
+      internalID: -2394086101902402261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_160
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 17
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a4988344212e7e20800000000000000
+      internalID: 3350151612445791392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_161
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 17
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6384fea006dfb860800000000000000
+      internalID: 7547986798919844719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_162
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 46
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b17d18bf7195a90800000000000000
+      internalID: -7324796949958812790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_163
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 18
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f6c707184e5d4b0800000000000000
+      internalID: -5416171732254036087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_164
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 17
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbb969fc52b1e600800000000000000
+      internalID: 495873546378656760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_165
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 17
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3dd42bfbe790b6a0800000000000000
+      internalID: -6435476827725832902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_166
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 17
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541aaddf69043edb0800000000000000
+      internalID: -4763892963579616955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_167
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 18
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d011c66dbf1906e0800000000000000
+      internalID: -1870929271862521639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_168
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 18
+        width: 10
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a12c7d5d392b500800000000000000
+      internalID: 410553062701275786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_169
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 17
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89736072aea593240800000000000000
+      internalID: 4771945241899317144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_170
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 17
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a472f6c32d4bd5010800000000000000
+      internalID: 1179297492490987338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_171
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 18
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd5ac2a72f84aacd0800000000000000
+      internalID: -2546142433055562277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_172
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 46
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eefadc3ed2fc87550800000000000000
+      internalID: 6158900286431539182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_173
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 18
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa9dcbeb1ad99f5a0800000000000000
+      internalID: -6486980470235145809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_174
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 17
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad7da50a4bddb5a0800000000000000
+      internalID: -6503801175883809376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Brotato - Entities - Enemies_175
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 18
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff42d89252dde580800000000000000
+      internalID: -8796143244991639562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PC _ Computer - Brotato - Entities - Enemies_0: -1477352331906036383
+      PC _ Computer - Brotato - Entities - Enemies_1: -8993176557342647669
+      PC _ Computer - Brotato - Entities - Enemies_10: 6995752287986722886
+      PC _ Computer - Brotato - Entities - Enemies_100: 9080426177450708798
+      PC _ Computer - Brotato - Entities - Enemies_101: -8665805428349411558
+      PC _ Computer - Brotato - Entities - Enemies_102: -2204482460295565685
+      PC _ Computer - Brotato - Entities - Enemies_103: 7414260746676257266
+      PC _ Computer - Brotato - Entities - Enemies_104: 3920491811139562565
+      PC _ Computer - Brotato - Entities - Enemies_105: -6264935077870120227
+      PC _ Computer - Brotato - Entities - Enemies_106: 2607506968105194675
+      PC _ Computer - Brotato - Entities - Enemies_107: -8293272619494279025
+      PC _ Computer - Brotato - Entities - Enemies_108: 4643976687444893901
+      PC _ Computer - Brotato - Entities - Enemies_109: -4132623370922989072
+      PC _ Computer - Brotato - Entities - Enemies_11: -7639510287343580664
+      PC _ Computer - Brotato - Entities - Enemies_110: 8741058562577166343
+      PC _ Computer - Brotato - Entities - Enemies_111: -6682678191256745307
+      PC _ Computer - Brotato - Entities - Enemies_112: -497819932976976322
+      PC _ Computer - Brotato - Entities - Enemies_113: 7582649256593172859
+      PC _ Computer - Brotato - Entities - Enemies_114: -890081557014504572
+      PC _ Computer - Brotato - Entities - Enemies_115: 6343906874573887832
+      PC _ Computer - Brotato - Entities - Enemies_116: 7148074987853676276
+      PC _ Computer - Brotato - Entities - Enemies_117: 6173178408693014456
+      PC _ Computer - Brotato - Entities - Enemies_118: 2640117170746030666
+      PC _ Computer - Brotato - Entities - Enemies_119: -583305381670911387
+      PC _ Computer - Brotato - Entities - Enemies_12: -2190558595030516504
+      PC _ Computer - Brotato - Entities - Enemies_120: -4015449194035029924
+      PC _ Computer - Brotato - Entities - Enemies_121: 8901443882674185264
+      PC _ Computer - Brotato - Entities - Enemies_122: 6896954484968180264
+      PC _ Computer - Brotato - Entities - Enemies_123: 4897243136262369594
+      PC _ Computer - Brotato - Entities - Enemies_124: -4104203097740104010
+      PC _ Computer - Brotato - Entities - Enemies_125: 5508439852720363112
+      PC _ Computer - Brotato - Entities - Enemies_126: 5024847483002829495
+      PC _ Computer - Brotato - Entities - Enemies_127: 2911801154884942064
+      PC _ Computer - Brotato - Entities - Enemies_128: 4328483210547585275
+      PC _ Computer - Brotato - Entities - Enemies_129: 4258450868751165197
+      PC _ Computer - Brotato - Entities - Enemies_13: -7208720131837172998
+      PC _ Computer - Brotato - Entities - Enemies_130: -3711015644629354990
+      PC _ Computer - Brotato - Entities - Enemies_131: -417767454341842136
+      PC _ Computer - Brotato - Entities - Enemies_132: -8270605021263667511
+      PC _ Computer - Brotato - Entities - Enemies_133: 7433804850033517275
+      PC _ Computer - Brotato - Entities - Enemies_134: 4688943246444425809
+      PC _ Computer - Brotato - Entities - Enemies_135: -4733098050798618182
+      PC _ Computer - Brotato - Entities - Enemies_136: 197010779201541139
+      PC _ Computer - Brotato - Entities - Enemies_137: 344174244634945886
+      PC _ Computer - Brotato - Entities - Enemies_138: -3789398340841167812
+      PC _ Computer - Brotato - Entities - Enemies_139: -1059292925502360148
+      PC _ Computer - Brotato - Entities - Enemies_14: -7741405891430995698
+      PC _ Computer - Brotato - Entities - Enemies_140: -8137458875197372757
+      PC _ Computer - Brotato - Entities - Enemies_141: 7078029463647938992
+      PC _ Computer - Brotato - Entities - Enemies_142: 3227936220763004257
+      PC _ Computer - Brotato - Entities - Enemies_143: 1573945267026730836
+      PC _ Computer - Brotato - Entities - Enemies_144: -5967861874411591654
+      PC _ Computer - Brotato - Entities - Enemies_145: 8835471169631991311
+      PC _ Computer - Brotato - Entities - Enemies_146: -6507693824237244824
+      PC _ Computer - Brotato - Entities - Enemies_147: -81756575367332213
+      PC _ Computer - Brotato - Entities - Enemies_148: 4280366841154957936
+      PC _ Computer - Brotato - Entities - Enemies_149: -4530665489086595446
+      PC _ Computer - Brotato - Entities - Enemies_15: -3741765070811299196
+      PC _ Computer - Brotato - Entities - Enemies_150: 1115042718197905954
+      PC _ Computer - Brotato - Entities - Enemies_151: -621247091610154165
+      PC _ Computer - Brotato - Entities - Enemies_152: -2206053719499255460
+      PC _ Computer - Brotato - Entities - Enemies_153: 5938653886088984982
+      PC _ Computer - Brotato - Entities - Enemies_154: -6397306462861720052
+      PC _ Computer - Brotato - Entities - Enemies_155: 6576095473714324663
+      PC _ Computer - Brotato - Entities - Enemies_156: -2204370383343149653
+      PC _ Computer - Brotato - Entities - Enemies_157: 1576860549046501899
+      PC _ Computer - Brotato - Entities - Enemies_158: -5772817986655953373
+      PC _ Computer - Brotato - Entities - Enemies_159: -2394086101902402261
+      PC _ Computer - Brotato - Entities - Enemies_16: 3160474500147468842
+      PC _ Computer - Brotato - Entities - Enemies_160: 3350151612445791392
+      PC _ Computer - Brotato - Entities - Enemies_161: 7547986798919844719
+      PC _ Computer - Brotato - Entities - Enemies_162: -7324796949958812790
+      PC _ Computer - Brotato - Entities - Enemies_163: -5416171732254036087
+      PC _ Computer - Brotato - Entities - Enemies_164: 495873546378656760
+      PC _ Computer - Brotato - Entities - Enemies_165: -6435476827725832902
+      PC _ Computer - Brotato - Entities - Enemies_166: -4763892963579616955
+      PC _ Computer - Brotato - Entities - Enemies_167: -1870929271862521639
+      PC _ Computer - Brotato - Entities - Enemies_168: 410553062701275786
+      PC _ Computer - Brotato - Entities - Enemies_169: 4771945241899317144
+      PC _ Computer - Brotato - Entities - Enemies_17: -1212614419447291431
+      PC _ Computer - Brotato - Entities - Enemies_170: 1179297492490987338
+      PC _ Computer - Brotato - Entities - Enemies_171: -2546142433055562277
+      PC _ Computer - Brotato - Entities - Enemies_172: 6158900286431539182
+      PC _ Computer - Brotato - Entities - Enemies_173: -6486980470235145809
+      PC _ Computer - Brotato - Entities - Enemies_174: -6503801175883809376
+      PC _ Computer - Brotato - Entities - Enemies_175: -8796143244991639562
+      PC _ Computer - Brotato - Entities - Enemies_18: 5209135523860545054
+      PC _ Computer - Brotato - Entities - Enemies_19: -403696222143032925
+      PC _ Computer - Brotato - Entities - Enemies_2: -207702127201095357
+      PC _ Computer - Brotato - Entities - Enemies_20: -862693671691637352
+      PC _ Computer - Brotato - Entities - Enemies_21: -5119020881386425189
+      PC _ Computer - Brotato - Entities - Enemies_22: -8199082397563641008
+      PC _ Computer - Brotato - Entities - Enemies_23: 1535550565148621426
+      PC _ Computer - Brotato - Entities - Enemies_24: -6841167365968086531
+      PC _ Computer - Brotato - Entities - Enemies_25: -4925112212909802205
+      PC _ Computer - Brotato - Entities - Enemies_26: -7526710672865071756
+      PC _ Computer - Brotato - Entities - Enemies_27: 4865246216394405963
+      PC _ Computer - Brotato - Entities - Enemies_28: 3172469884770490308
+      PC _ Computer - Brotato - Entities - Enemies_29: -5876626281454943024
+      PC _ Computer - Brotato - Entities - Enemies_3: -4501924081602052567
+      PC _ Computer - Brotato - Entities - Enemies_30: 2660215129271931664
+      PC _ Computer - Brotato - Entities - Enemies_31: 7990809591931430713
+      PC _ Computer - Brotato - Entities - Enemies_32: -2719420576282331713
+      PC _ Computer - Brotato - Entities - Enemies_33: 2511337676404685767
+      PC _ Computer - Brotato - Entities - Enemies_34: 4235708860960935087
+      PC _ Computer - Brotato - Entities - Enemies_35: -8945267031804886257
+      PC _ Computer - Brotato - Entities - Enemies_36: -8755937844206368894
+      PC _ Computer - Brotato - Entities - Enemies_37: 8041844351376215243
+      PC _ Computer - Brotato - Entities - Enemies_38: 824600878850719149
+      PC _ Computer - Brotato - Entities - Enemies_39: -8209631964867662626
+      PC _ Computer - Brotato - Entities - Enemies_4: -7468743379301478219
+      PC _ Computer - Brotato - Entities - Enemies_40: -503145253092734861
+      PC _ Computer - Brotato - Entities - Enemies_41: 8893577583653545122
+      PC _ Computer - Brotato - Entities - Enemies_42: 1279249864181081154
+      PC _ Computer - Brotato - Entities - Enemies_43: -3908565818197851202
+      PC _ Computer - Brotato - Entities - Enemies_44: -1479157415801303109
+      PC _ Computer - Brotato - Entities - Enemies_45: 6456720122381334547
+      PC _ Computer - Brotato - Entities - Enemies_46: -3496953475162243435
+      PC _ Computer - Brotato - Entities - Enemies_47: -6352391373726427647
+      PC _ Computer - Brotato - Entities - Enemies_48: -5101898123878472556
+      PC _ Computer - Brotato - Entities - Enemies_49: 1717461522480105280
+      PC _ Computer - Brotato - Entities - Enemies_5: 7966603677428121308
+      PC _ Computer - Brotato - Entities - Enemies_50: -3234041416429687034
+      PC _ Computer - Brotato - Entities - Enemies_51: 2314942004518734426
+      PC _ Computer - Brotato - Entities - Enemies_52: 1971489920470635241
+      PC _ Computer - Brotato - Entities - Enemies_53: -4190995863014055430
+      PC _ Computer - Brotato - Entities - Enemies_54: 3107490110968498116
+      PC _ Computer - Brotato - Entities - Enemies_55: 6788782533263586931
+      PC _ Computer - Brotato - Entities - Enemies_56: 8092881700077243172
+      PC _ Computer - Brotato - Entities - Enemies_57: -1841614877853790903
+      PC _ Computer - Brotato - Entities - Enemies_58: -78086325237586671
+      PC _ Computer - Brotato - Entities - Enemies_59: -1710743718835338727
+      PC _ Computer - Brotato - Entities - Enemies_6: -775568071663031757
+      PC _ Computer - Brotato - Entities - Enemies_60: 9101227427151878661
+      PC _ Computer - Brotato - Entities - Enemies_61: 8276266587576731781
+      PC _ Computer - Brotato - Entities - Enemies_62: -1158064101661754912
+      PC _ Computer - Brotato - Entities - Enemies_63: -6594117338637365081
+      PC _ Computer - Brotato - Entities - Enemies_64: 65830331218112517
+      PC _ Computer - Brotato - Entities - Enemies_65: -3566521497518375217
+      PC _ Computer - Brotato - Entities - Enemies_66: -8641694926070557868
+      PC _ Computer - Brotato - Entities - Enemies_67: -9201588529125632710
+      PC _ Computer - Brotato - Entities - Enemies_68: -5129167280679353234
+      PC _ Computer - Brotato - Entities - Enemies_69: -1246232278906406122
+      PC _ Computer - Brotato - Entities - Enemies_7: 796961735803532467
+      PC _ Computer - Brotato - Entities - Enemies_70: 30250151910613898
+      PC _ Computer - Brotato - Entities - Enemies_71: 4709981640997939127
+      PC _ Computer - Brotato - Entities - Enemies_72: -446732738179184217
+      PC _ Computer - Brotato - Entities - Enemies_73: -345981624279825310
+      PC _ Computer - Brotato - Entities - Enemies_74: -2097182643694936744
+      PC _ Computer - Brotato - Entities - Enemies_75: 550318299071463826
+      PC _ Computer - Brotato - Entities - Enemies_76: -2940481690531828027
+      PC _ Computer - Brotato - Entities - Enemies_77: 4828433876605060848
+      PC _ Computer - Brotato - Entities - Enemies_78: -550143262098769308
+      PC _ Computer - Brotato - Entities - Enemies_79: 2548609202905388237
+      PC _ Computer - Brotato - Entities - Enemies_8: 2653277979418313194
+      PC _ Computer - Brotato - Entities - Enemies_80: -292520293786591630
+      PC _ Computer - Brotato - Entities - Enemies_81: -4827811796799413804
+      PC _ Computer - Brotato - Entities - Enemies_82: 4283065741629275046
+      PC _ Computer - Brotato - Entities - Enemies_83: -4230374440854336842
+      PC _ Computer - Brotato - Entities - Enemies_84: 9112177701253644907
+      PC _ Computer - Brotato - Entities - Enemies_85: 8008440808776551646
+      PC _ Computer - Brotato - Entities - Enemies_86: -1532683533480602912
+      PC _ Computer - Brotato - Entities - Enemies_87: -126679361788015672
+      PC _ Computer - Brotato - Entities - Enemies_88: -1647829448087039634
+      PC _ Computer - Brotato - Entities - Enemies_89: 1666711421568876722
+      PC _ Computer - Brotato - Entities - Enemies_9: -1084184451218909260
+      PC _ Computer - Brotato - Entities - Enemies_90: 3047409693047872745
+      PC _ Computer - Brotato - Entities - Enemies_91: -856608876678155832
+      PC _ Computer - Brotato - Entities - Enemies_92: 4736682353786674285
+      PC _ Computer - Brotato - Entities - Enemies_93: 8572179947929183323
+      PC _ Computer - Brotato - Entities - Enemies_94: 6292408694430997232
+      PC _ Computer - Brotato - Entities - Enemies_95: -2912615121869327113
+      PC _ Computer - Brotato - Entities - Enemies_96: 350106069643823537
+      PC _ Computer - Brotato - Entities - Enemies_97: 1419099607904616216
+      PC _ Computer - Brotato - Entities - Enemies_98: -2688390172712578295
+      PC _ Computer - Brotato - Entities - Enemies_99: -3849253057095827346
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: 185688cdc60f59e499f4df0d421a46b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6890334285561829037
+    second: 20260325_1148_Separated Tower Bases_remix_01kmj68tgpe00t3bz87e1ht9cq_0
+  - first:
+      213: 1693048153321601206
+    second: 20260325_1148_Separated Tower Bases_remix_01kmj68tgpe00t3bz87e1ht9cq_1
+  - first:
+      213: -5187670450281325415
+    second: 20260325_1148_Separated Tower Bases_remix_01kmj68tgpe00t3bz87e1ht9cq_2
+  - first:
+      213: 714231582566321021
+    second: 20260325_1148_Separated Tower Bases_remix_01kmj68tgpe00t3bz87e1ht9cq_3
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 20260325_1148_Separated Tower Bases_remix_01kmj68tgpe00t3bz87e1ht9cq_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 512
+        width: 544
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da69b92b6826f9f50800000000000000
+      internalID: 6890334285561829037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20260325_1148_Separated Tower Bases_remix_01kmj68tgpe00t3bz87e1ht9cq_1
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 513
+        width: 579
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b87d56435aee7710800000000000000
+      internalID: 1693048153321601206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20260325_1148_Separated Tower Bases_remix_01kmj68tgpe00t3bz87e1ht9cq_2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1
+        width: 647
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99cd03ff531b108b0800000000000000
+      internalID: -5187670450281325415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20260325_1148_Separated Tower Bases_remix_01kmj68tgpe00t3bz87e1ht9cq_3
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 1
+        width: 523
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b0b3617d579e900800000000000000
+      internalID: 714231582566321021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      20260325_1148_Separated Tower Bases_remix_01kmj68tgpe00t3bz87e1ht9cq_0: 6890334285561829037
+      20260325_1148_Separated Tower Bases_remix_01kmj68tgpe00t3bz87e1ht9cq_1: 1693048153321601206
+      20260325_1148_Separated Tower Bases_remix_01kmj68tgpe00t3bz87e1ht9cq_2: -5187670450281325415
+      20260325_1148_Separated Tower Bases_remix_01kmj68tgpe00t3bz87e1ht9cq_3: 714231582566321021
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

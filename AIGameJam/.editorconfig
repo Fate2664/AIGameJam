@@ -1,0 +1,225 @@
+root = true
+
+[*.cs]
+# Private member 'X' can be removed as the value assigned to it is never read (IDE0052)
+dotnet_diagnostic.IDE0052.severity = hint
+
+# Private member 'X' is never used (IDE0051) - similar category, also made less strict
+dotnet_diagnostic.IDE0051.severity = hint
+
+# Naming rule violation (IDE1006) - e.g. private field 'inputTimer' naming style
+dotnet_diagnostic.IDE1006.severity = hint
+
+# ReSharper inspections affecting SettingsMenu.cs
+# Inconsistent / naming-style violations
+resharper_inconsistent_naming_highlighting = hint
+
+# Namespace does not correspond to file location
+resharper_check_namespace_highlighting = hint
+
+# Redundant 'using' directives
+resharper_redundant_using_directive_highlighting = hint
+
+# Qualifier is redundant (Redundant name qualifier)
+resharper_redundant_name_qualifier_highlighting = hint
+
+# Unused local variable
+resharper_unused_variable_highlighting = hint
+
+# Assignment is not used (fields/locals assigned but never read)
+resharper_redundant_assignment_highlighting = hint
+
+# Unused private field (field is assigned but its value is never used)
+resharper_not_accessed_field_local_highlighting = hint
+
+# ReSharper inspections affecting PlayerAnimations.cs
+# Unassigned private field (e.g., SerializeField fields assigned by Unity Inspector)
+# Note: These warnings may require ReSharper Unity plugin for proper suppression
+# Try multiple variations to match ReSharper's inspection ID format
+resharper_unassigned_field_local_highlighting = hint
+resharper_unassigned_field_highlighting = hint
+resharper_unassigned_field_global_highlighting = hint
+resharper_field_never_assigned_highlighting = hint
+
+# Unused private method (e.g., Unity lifecycle methods like Awake, Update, OnDestroy)
+resharper_unused_member_local_highlighting = hint
+resharper_unused_member_highlighting = hint
+
+# Event never invoked / never used (e.g. VerticalNav, HorizontalNav in GameInput.cs)
+resharper_event_never_invoked_highlighting = hint
+resharper_not_accessed_event_highlighting = hint
+resharper_unused_event_highlighting = hint
+
+resharper_possible_null_reference_exception_highlighting = hint
+
+# Additional common IDE diagnostics - made less strict
+# Make field readonly (IDE0044)
+dotnet_diagnostic.IDE0044.severity = hint
+
+# Remove unused parameter (IDE0060)
+dotnet_diagnostic.IDE0060.severity = hint
+
+# Unnecessary assignment (IDE0059)
+dotnet_diagnostic.IDE0059.severity = hint
+
+# Expression value is never used (IDE0058)
+dotnet_diagnostic.IDE0058.severity = hint
+
+# Use expression body for methods (IDE0022)
+dotnet_diagnostic.IDE0022.severity = hint
+
+# Use expression body for properties (IDE0025)
+dotnet_diagnostic.IDE0025.severity = hint
+
+# Use expression body for operators (IDE0023)
+dotnet_diagnostic.IDE0023.severity = hint
+
+# Use expression body for accessors (IDE0027)
+dotnet_diagnostic.IDE0027.severity = hint
+
+# Simplify object initialization (IDE0017)
+dotnet_diagnostic.IDE0017.severity = hint
+
+# Inline variable declaration (IDE0018)
+dotnet_diagnostic.IDE0018.severity = hint
+
+# Use pattern matching (IDE0019, IDE0020)
+dotnet_diagnostic.IDE0019.severity = hint
+dotnet_diagnostic.IDE0020.severity = hint
+
+# Simplify collection initialization (IDE0028)
+dotnet_diagnostic.IDE0028.severity = hint
+
+# Use coalesce expression (IDE0029, IDE0030)
+dotnet_diagnostic.IDE0029.severity = hint
+dotnet_diagnostic.IDE0030.severity = hint
+
+# Use null propagation (IDE0031)
+dotnet_diagnostic.IDE0031.severity = hint
+
+# Use auto property (IDE0032)
+dotnet_diagnostic.IDE0032.severity = hint
+
+# Simplify 'default' expression (IDE0034)
+dotnet_diagnostic.IDE0034.severity = hint
+
+# Unreachable code detected (IDE0035)
+dotnet_diagnostic.IDE0035.severity = hint
+
+# Modifiers are not ordered (IDE0036)
+dotnet_diagnostic.IDE0036.severity = hint
+
+# Use inferred member name (IDE0037)
+dotnet_diagnostic.IDE0037.severity = hint
+
+# Use pattern matching (IDE0038)
+dotnet_diagnostic.IDE0038.severity = hint
+
+# Use local function (IDE0039)
+dotnet_diagnostic.IDE0039.severity = hint
+
+# Add accessibility modifiers (IDE0040)
+dotnet_diagnostic.IDE0040.severity = hint
+
+# Use 'is null' check (IDE0041)
+dotnet_diagnostic.IDE0041.severity = hint
+
+# Deconstruct variable declaration (IDE0042)
+dotnet_diagnostic.IDE0042.severity = hint
+
+# Convert to conditional expression (IDE0045, IDE0046)
+dotnet_diagnostic.IDE0045.severity = hint
+dotnet_diagnostic.IDE0046.severity = hint
+
+# Remove unnecessary parentheses (IDE0047)
+dotnet_diagnostic.IDE0047.severity = hint
+
+# Add parentheses for clarity (IDE0048)
+dotnet_diagnostic.IDE0048.severity = hint
+
+# Simplify names (IDE0001, IDE0002, IDE0003, IDE0004, IDE0005)
+dotnet_diagnostic.IDE0001.severity = hint
+dotnet_diagnostic.IDE0002.severity = hint
+dotnet_diagnostic.IDE0003.severity = hint
+dotnet_diagnostic.IDE0004.severity = hint
+dotnet_diagnostic.IDE0005.severity = hint
+
+# Use explicit type instead of 'var' (IDE0008)
+dotnet_diagnostic.IDE0008.severity = hint
+
+# Add missing cases (IDE0010, IDE0072)
+dotnet_diagnostic.IDE0010.severity = hint
+dotnet_diagnostic.IDE0072.severity = hint
+
+# Add braces (IDE0011)
+dotnet_diagnostic.IDE0011.severity = hint
+
+# Use compound assignment (IDE0054, IDE0074)
+dotnet_diagnostic.IDE0054.severity = hint
+dotnet_diagnostic.IDE0074.severity = hint
+
+# Use index operator (IDE0056)
+dotnet_diagnostic.IDE0056.severity = hint
+
+# Use range operator (IDE0057)
+dotnet_diagnostic.IDE0057.severity = hint
+
+# Use expression body for local functions (IDE0061)
+dotnet_diagnostic.IDE0061.severity = hint
+
+# Make local function 'static' (IDE0062)
+dotnet_diagnostic.IDE0062.severity = hint
+
+# Convert switch statement to expression (IDE0066, IDE0084)
+dotnet_diagnostic.IDE0066.severity = hint
+dotnet_diagnostic.IDE0084.severity = hint
+
+# Simplify interpolation (IDE0071)
+dotnet_diagnostic.IDE0071.severity = hint
+
+# Simplify conditional expression (IDE0075)
+dotnet_diagnostic.IDE0075.severity = hint
+
+# Use pattern matching ('not' operator) (IDE0083)
+dotnet_diagnostic.IDE0083.severity = hint
+
+# Use 'new(...)' (IDE0090)
+dotnet_diagnostic.IDE0090.severity = hint
+
+# Remove redundant equality (IDE0100)
+dotnet_diagnostic.IDE0100.severity = hint
+
+# Remove redundant discard (IDE0110)
+dotnet_diagnostic.IDE0110.severity = hint
+
+# Simplify LINQ expression (IDE0120)
+dotnet_diagnostic.IDE0120.severity = hint
+
+# Namespace does not match folder structure (IDE0130)
+dotnet_diagnostic.IDE0130.severity = hint
+
+# Simplify 'default' expression (IDE0140)
+dotnet_diagnostic.IDE0140.severity = hint
+
+# Prefer 'string.Equals' over '==' (IDE0150)
+dotnet_diagnostic.IDE0150.severity = hint
+
+# Convert to file-scoped namespace (IDE0161)
+dotnet_diagnostic.IDE0161.severity = hint
+
+# Simplify property access (IDE0170, IDE0175)
+dotnet_diagnostic.IDE0170.severity = hint
+dotnet_diagnostic.IDE0175.severity = hint
+
+# Use pattern matching ('is' operator) (IDE0190)
+dotnet_diagnostic.IDE0190.severity = hint
+
+# Remove unnecessary lambda expression (IDE0200)
+dotnet_diagnostic.IDE0200.severity = hint
+
+# Use 'throw helper' (IDE0210)
+dotnet_diagnostic.IDE0210.severity = hint
+
+# Add explicit cast (IDE0220)
+dotnet_diagnostic.IDE0220.severity = hint
+
