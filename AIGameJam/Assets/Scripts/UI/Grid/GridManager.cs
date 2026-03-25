@@ -5,29 +5,29 @@ using UnityEngine;
 
 public interface IGridPlaceable
 {
-    void OnPlaced(GridManager gridManager, PlotVisuals plot);
-    void OnRemoved(GridManager gridManager, PlotVisuals plot);
+    void OnPlaced(GridManager gridManager, CellVisuals cell);
+    void OnRemoved(GridManager gridManager, CellVisuals cell);
 }
 
 public class GridManager : MonoBehaviour
 {
     [SerializeField] private UIBlock root = null;
     [SerializeField] private GameInput gameInput = null;
-    [SerializeField] private bool autoCollectPlots = true;
+    [SerializeField] private bool autoCollectCells = true;
     [SerializeField] private bool allowReplacingPlacedItems = false;
     [SerializeField] private bool allowRemovingPlacedItems = true;
-    [SerializeField] private List<ItemView> plotViews = new();
+    [SerializeField] private List<ItemView> cellViews;
     [SerializeField] private GameObject selectedPlaceablePrefab = null;
 
-    private readonly List<PlotVisuals> plots = new();
-    private readonly Dictionary<PlotVisuals, PlacedItemRecord> placedItems = new();
+    private readonly List<CellVisuals> cells = new();
+    private readonly Dictionary<CellVisuals, PlacedItemRecord> placedItems = new();
     private bool gesturesRegistered;
 
-    public event Action<PlotVisuals> PlotClicked;
-    public event Action<PlotVisuals, GameObject> PlotItemPlaced;
-    public event Action<PlotVisuals, GameObject> PlotItemRemoved;
+    public event Action<CellVisuals> CellClicked;
+    public event Action<CellVisuals, GameObject> CellItemPlaced;
+    public event Action<CellVisuals, GameObject> CellItemRemoved;
 
-    public IReadOnlyList<PlotVisuals> Plots => plots;
+    public IReadOnlyList<CellVisuals> Cells => cells;
     public GameObject SelectedPlaceablePrefab => selectedPlaceablePrefab;
 
     private struct PlacedItemRecord
@@ -52,16 +52,16 @@ public class GridManager : MonoBehaviour
 
     private void Awake()
     {
-        if (autoCollectPlots)
+        if (autoCollectCells)
         {
-            CollectPlots();
+            CollectCells();
         }
         else
         {
-            RebuildPlotCache();
+            RebuildCellCache();
         }
 
-        RefreshAllPlots();
+        RefreshAllCells();
     }
 
     private void Start()
@@ -81,82 +81,82 @@ public class GridManager : MonoBehaviour
             return;
         }
 
-        if (autoCollectPlots)
+        if (autoCollectCells)
         {
-            CollectPlots();
+            CollectCells();
         }
         else
         {
-            RebuildPlotCache();
+            RebuildCellCache();
         }
     }
 
-    public void CollectPlots()
+    public void CollectCells()
     {
-        plotViews.Clear();
+        cellViews.Clear();
         ItemView[] childViews = GetComponentsInChildren<ItemView>(true);
         for (int i = 0; i < childViews.Length; i++)
         {
-            if (childViews[i].TryGetVisuals<PlotVisuals>(out _))
+            if (childViews[i].TryGetVisuals<CellVisuals>(out _))
             {
-                plotViews.Add(childViews[i]);
+                cellViews.Add(childViews[i]);
             }
         }
 
-        RebuildPlotCache();
+        RebuildCellCache();
     }
 
     public void SetSelectedPlaceable(GameObject placeablePrefab)
     {
         selectedPlaceablePrefab = placeablePrefab;
-        RefreshAllPlots();
+        RefreshAllCells();
     }
 
     public void ClearSelectedPlaceable()
     {
         selectedPlaceablePrefab = null;
-        RefreshAllPlots();
+        RefreshAllCells();
     }
 
-    public bool RegisterPlot(ItemView plotView)
+    public bool RegisterCell(ItemView cellView)
     {
-        if (plotView == null || plotViews.Contains(plotView) || !plotView.TryGetVisuals(out PlotVisuals plot))
+        if (cellView == null || cellViews.Contains(cellView) || !cellView.TryGetVisuals(out CellVisuals cell))
         {
             return false;
         }
 
-        plotViews.Add(plotView);
-        plots.Add(plot);
-        RefreshPlot(plot);
+        cellViews.Add(cellView);
+        cells.Add(cell);
+        RefreshCell(cell);
         return true;
     }
 
-    public bool UnregisterPlot(ItemView plotView)
+    public bool UnregisterCell(ItemView cellView)
     {
-        if (plotView == null || !plotView.TryGetVisuals(out PlotVisuals plot))
+        if (cellView == null || !cellView.TryGetVisuals(out CellVisuals cell))
         {
             return false;
         }
 
-        TryRemovePlacedItem(plot);
-        plots.Remove(plot);
-        return plotViews.Remove(plotView);
+        TryRemovePlacedItem(cell);
+        cells.Remove(cell);
+        return cellViews.Remove(cellView);
     }
 
-    public bool IsOccupied(PlotVisuals plot)
+    public bool IsOccupied(CellVisuals cell)
     {
-        return plot != null && placedItems.ContainsKey(plot);
+        return cell != null && placedItems.ContainsKey(cell);
     }
 
-    public bool TryGetPlacedItem(PlotVisuals plot, out GameObject placedItem)
+    public bool TryGetPlacedItem(CellVisuals cell, out GameObject placedItem)
     {
-        if (plot == null)
+        if (cell == null)
         {
             placedItem = null;
             return false;
         }
 
-        if (placedItems.TryGetValue(plot, out PlacedItemRecord placedItemRecord))
+        if (placedItems.TryGetValue(cell, out PlacedItemRecord placedItemRecord))
         {
             placedItem = placedItemRecord.Instance;
             return true;
@@ -166,19 +166,19 @@ public class GridManager : MonoBehaviour
         return false;
     }
 
-    public bool CanPlaceSelectedAt(PlotVisuals plot)
+    public bool CanPlaceSelectedAt(CellVisuals cell)
     {
-        return CanPlace(selectedPlaceablePrefab, plot);
+        return CanPlace(selectedPlaceablePrefab, cell);
     }
 
-    public bool CanPlace(GameObject placeablePrefab, PlotVisuals plot)
+    public bool CanPlace(GameObject placeablePrefab, CellVisuals cell)
     {
-        if (placeablePrefab == null || plot == null || !plots.Contains(plot))
+        if (placeablePrefab == null || cell == null || !cells.Contains(cell))
         {
             return false;
         }
 
-        if (!IsOccupied(plot))
+        if (!IsOccupied(cell))
         {
             return true;
         }
@@ -186,69 +186,67 @@ public class GridManager : MonoBehaviour
         return allowReplacingPlacedItems;
     }
 
-    public bool TryPlaceSelected(PlotVisuals plot)
+    public bool TryPlaceSelected(CellVisuals cell)
     {
-        return TryPlacePrefab(selectedPlaceablePrefab, plot);
+        return TryPlacePrefab(selectedPlaceablePrefab, cell);
     }
 
-    public bool TryPlacePrefab(GameObject placeablePrefab, PlotVisuals plot)
+    public bool TryPlacePrefab(GameObject placeablePrefab, CellVisuals cell)
     {
-        if (!CanPlace(placeablePrefab, plot))
+        if (!CanPlace(placeablePrefab, cell))
         {
             return false;
         }
 
-        if (IsOccupied(plot))
+        if (IsOccupied(cell))
         {
-            TryRemovePlacedItem(plot);
+            TryRemovePlacedItem(cell);
         }
 
-        GameObject instance = Instantiate(placeablePrefab, plot.PlacementAnchor, false);
-        ResetLocalTransform(instance.transform);
-        HandlePlacement(plot, instance, true);
+        GameObject instance = Instantiate(placeablePrefab, cell.PlacementAnchor, false);
+        HandlePlacement(cell, instance, true);
         return true;
     }
 
-    public bool TryPlaceExisting(GameObject placeableInstance, PlotVisuals plot, bool destroyOnRemove = false)
+    public bool TryPlaceExisting(GameObject placeableInstance, CellVisuals cell, bool destroyOnRemove = false)
     {
-        if (placeableInstance == null || plot == null || !plots.Contains(plot))
+        if (placeableInstance == null || cell == null || !cells.Contains(cell))
         {
             return false;
         }
 
-        if (IsOccupied(plot))
+        if (IsOccupied(cell))
         {
             if (!allowReplacingPlacedItems)
             {
                 return false;
             }
 
-            TryRemovePlacedItem(plot);
+            TryRemovePlacedItem(cell);
         }
 
-        placeableInstance.transform.SetParent(plot.PlacementAnchor, false);
-        ResetLocalTransform(placeableInstance.transform);
-        HandlePlacement(plot, placeableInstance, destroyOnRemove);
+        placeableInstance.transform.SetParent(cell.PlacementAnchor, false);
+        HandlePlacement(cell, placeableInstance, destroyOnRemove);
         return true;
     }
 
-    public bool TryRemovePlacedItem(PlotVisuals plot)
+    public bool TryRemovePlacedItem(CellVisuals cell)
     {
-        if (plot == null || !placedItems.TryGetValue(plot, out PlacedItemRecord placedItemRecord))
+        if (cell == null || !placedItems.TryGetValue(cell, out PlacedItemRecord placedItemRecord))
         {
             return false;
         }
 
-        placedItems.Remove(plot);
+        placedItems.Remove(cell);
         GameObject placedItem = placedItemRecord.Instance;
 
         IGridPlaceable placeableHandler = FindPlaceableHandler(placedItem);
         if (placeableHandler != null)
         {
-            placeableHandler.OnRemoved(this, plot);
+            placeableHandler.OnRemoved(this, cell);
         }
 
-        PlotItemRemoved?.Invoke(plot, placedItem);
+        CellItemRemoved?.Invoke(cell, placedItem);
 
         if (placedItem != null)
         {
@@ -262,7 +260,7 @@ public class GridManager : MonoBehaviour
             }
         }
 
-        RefreshPlot(plot);
+        RefreshCell(cell);
         return true;
     }
 
@@ -273,15 +271,15 @@ public class GridManager : MonoBehaviour
             return;
         }
 
-        root.AddGestureHandler<Gesture.OnHover, PlotVisuals>(HandlePlotHover);
-        root.AddGestureHandler<Gesture.OnUnhover, PlotVisuals>(HandlePlotUnhover);
-        root.AddGestureHandler<Gesture.OnPress, PlotVisuals>(HandlePlotPress);
-        root.AddGestureHandler<Gesture.OnRelease, PlotVisuals>(HandlePlotRelease);
-        root.AddGestureHandler<Gesture.OnClick, PlotVisuals>(HandlePlotClick);
+        root.AddGestureHandler<Gesture.OnHover, CellVisuals>(HandleCellHover);
+        root.AddGestureHandler<Gesture.OnUnhover, CellVisuals>(HandleCellUnhover);
+        root.AddGestureHandler<Gesture.OnPress, CellVisuals>(HandleCellPress);
+        root.AddGestureHandler<Gesture.OnRelease, CellVisuals>(HandleCellRelease);
+        root.AddGestureHandler<Gesture.OnClick, CellVisuals>(HandleCellClick);
         gesturesRegistered = true;
     }
 
-    private void HandlePlotHover(Gesture.OnHover evt, PlotVisuals target)
+    private void HandleCellHover(Gesture.OnHover evt, CellVisuals target)
     {
         if (target == null)
         {
@@ -292,7 +290,7 @@ public class GridManager : MonoBehaviour
         target.SetPlacementPreview(selectedPlaceablePrefab != null, CanPlaceSelectedAt(target));
     }
 
-    private void HandlePlotUnhover(Gesture.OnUnhover evt, PlotVisuals target)
+    private void HandleCellUnhover(Gesture.OnUnhover evt, CellVisuals target)
     {
         if (target == null)
         {
@@ -304,7 +302,7 @@ public class GridManager : MonoBehaviour
         target.SetPlacementPreview(selectedPlaceablePrefab != null, CanPlaceSelectedAt(target));
     }
 
-    private void HandlePlotPress(Gesture.OnPress evt, PlotVisuals target)
+    private void HandleCellPress(Gesture.OnPress evt, CellVisuals target)
     {
         if (target == null)
         {
@@ -315,7 +313,7 @@ public class GridManager : MonoBehaviour
         target.SetPlacementPreview(selectedPlaceablePrefab != null, CanPlaceSelectedAt(target));
     }
 
-    private void HandlePlotRelease(Gesture.OnRelease evt, PlotVisuals target)
+    private void HandleCellRelease(Gesture.OnRelease evt, CellVisuals target)
     {
         if (target == null)
         {
@@ -325,14 +323,14 @@ public class GridManager : MonoBehaviour
         target.SetPressed(false);
     }
 
-    private void HandlePlotClick(Gesture.OnClick evt, PlotVisuals target)
+    private void HandleCellClick(Gesture.OnClick evt, CellVisuals target)
     {
         if (target == null)
         {
             return;
         }
 
-        PlotClicked?.Invoke(target);
+        CellClicked?.Invoke(target);
 
         if (selectedPlaceablePrefab != null)
         {
@@ -346,49 +344,49 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    private void HandlePlacement(PlotVisuals plot, GameObject placedItem, bool destroyOnRemove)
+    private void HandlePlacement(CellVisuals cell, GameObject placedItem, bool destroyOnRemove)
     {
-        placedItems[plot] = new PlacedItemRecord(placedItem, destroyOnRemove);
+        placedItems[cell] = new PlacedItemRecord(placedItem, destroyOnRemove);
 
         IGridPlaceable placeableHandler = FindPlaceableHandler(placedItem);
         if (placeableHandler != null)
         {
-            placeableHandler.OnPlaced(this, plot);
+            placeableHandler.OnPlaced(this, cell);
         }
 
-        PlotItemPlaced?.Invoke(plot, placedItem);
-        RefreshPlot(plot);
+        CellItemPlaced?.Invoke(cell, placedItem);
+        RefreshCell(cell);
     }
 
-    private void RefreshAllPlots()
+    private void RefreshAllCells()
     {
-        for (int i = 0; i < plots.Count; i++)
+        for (int i = 0; i < cells.Count; i++)
         {
-            RefreshPlot(plots[i]);
+            RefreshCell(cells[i]);
         }
     }
 
-    private void RefreshPlot(PlotVisuals plot)
+    private void RefreshCell(CellVisuals cell)
     {
-        if (plot == null)
+        if (cell == null)
         {
             return;
         }
 
-        plot.SetOccupied(IsOccupied(plot));
-        plot.SetPlacementPreview(selectedPlaceablePrefab != null, CanPlaceSelectedAt(plot));
+        cell.SetOccupied(IsOccupied(cell));
+        cell.SetPlacementPreview(selectedPlaceablePrefab != null, CanPlaceSelectedAt(cell));
     }
 
-    private void RebuildPlotCache()
+    private void RebuildCellCache()
     {
-        plots.Clear();
+        cells.Clear();
 
-        for (int i = 0; i < plotViews.Count; i++)
+        for (int i = 0; i < cellViews.Count; i++)
         {
-            ItemView plotView = plotViews[i];
-            if (plotView != null && plotView.TryGetVisuals(out PlotVisuals plot))
+            ItemView cellView = cellViews[i];
+            if (cellView != null && cellView.TryGetVisuals(out CellVisuals cell))
             {
-                plots.Add(plot);
+                cells.Add(cell);
             }
         }
     }
@@ -410,12 +408,5 @@ public class GridManager : MonoBehaviour
         }
 
         return null;
-    }
-
-    private static void ResetLocalTransform(Transform target)
-    {
-        target.localPosition = Vector3.zero;
-        target.localRotation = Quaternion.identity;
-        target.localScale = Vector3.one;
     }
 }

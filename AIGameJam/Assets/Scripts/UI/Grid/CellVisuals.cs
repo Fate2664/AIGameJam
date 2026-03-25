@@ -4,7 +4,7 @@ using Nova;
 using UnityEngine;
 
 [Serializable]
-public class PlotVisuals : ItemVisuals
+public class CellVisuals : ItemVisuals
 {
     public UIBlock2D Background;
     public Transform ItemAnchor;
