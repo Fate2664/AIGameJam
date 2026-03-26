@@ -12,3 +12,11 @@ Purpose: Running log of scope shifts and design decisions during the jam.
 - Fix: `CellGridGenerator` now writes Nova layout positions on each spawned cell so the cells do not stack at one transform position.
 - Fix: `CellGridGenerator` now adds a UIBlock to its generated grouping object so Nova gesture events can reach the spawned cells through a connected hierarchy.
 - Implementation: Replaced rectangle-only exclusions with per-cell exclusions and an inspector grid so individual cells can be toggled off before play.
+
+## 2026-03-26
+- Decision: Implement the loadout as a Nova `ListView` backed by `LoadoutItemDefinition` ScriptableObjects.
+- Reason: The loadout benefits from data binding and reusable visuals, while the grid still needs persistent cells for placement state.
+- Implementation: `LoadoutMenu` manages drag state, preview visuals, and optional budget enforcement; `GridManager` exposes hover/drop state without owning loadout data.
+- Fix: `GridManager` now tracks the selected `LoadoutItemDefinition` as the source of truth, so dragging or selecting a new loadout item updates the prefab that gets placed on the grid.
+- Implementation: Placement rotation is now owned by `GridManager`, driven by `RotateLeft`/`RotateRight` input, and applied in 90-degree Z-axis steps to both drag preview and placed items.
+- Constraint: `LoadoutItemDefinition` now includes `CanRotate`, and `GridManager` ignores rotation input plus forces zero rotation for non-rotatable items such as traps.

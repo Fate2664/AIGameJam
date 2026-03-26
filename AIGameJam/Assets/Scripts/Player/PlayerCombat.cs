@@ -14,13 +14,11 @@ public class PlayerCombat : MonoBehaviour
 
    private void Awake()
    {
-       gameInput.PrimaryAttack += HandlePrimaryAttack;
        gameInput.EnableActions();
    }
 
    private void OnDestroy()
    {
-       gameInput.PrimaryAttack -= HandlePrimaryAttack;
    }
 
    private void HandlePrimaryAttack(bool pressed)

@@ -28,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();      
-        gameInput.Move += OnMove;
         gameInput.EnableActions();
     }
 
@@ -56,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
     
     private void OnDestroy()
     {
-        gameInput.Move -= OnMove;
     }
 }
 

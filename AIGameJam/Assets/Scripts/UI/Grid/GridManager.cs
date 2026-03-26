@@ -16,19 +16,30 @@ public class GridManager : MonoBehaviour
     [SerializeField] private bool autoCollectCells = true;
     [SerializeField] private bool allowReplacingPlacedItems = false;
     [SerializeField] private bool allowRemovingPlacedItems = true;
-    [SerializeField] private List<ItemView> cellViews;
-    [SerializeField] private GameObject selectedPlaceablePrefab = null;
-
+    [SerializeField] private List<ItemView> cellViews = new();
+    
+    private LoadoutItemDefinition selectedPlaceableItem = null;
+    private GameObject selectedPlaceablePrefab = null;
     private readonly List<CellVisuals> cells = new();
     private readonly Dictionary<CellVisuals, PlacedItemRecord> placedItems = new();
     private bool gesturesRegistered;
+    private bool allowSelectedPlaceableClickPlacement = true;
+    private CellVisuals hoveredCell;
+    private int selectedRotationSteps;
 
     public event Action<CellVisuals> CellClicked;
     public event Action<CellVisuals, GameObject> CellItemPlaced;
     public event Action<CellVisuals, GameObject> CellItemRemoved;
+    public event Action<CellVisuals> HoveredCellChanged;
+    public event Action<float> SelectedRotationChanged;
 
     public IReadOnlyList<CellVisuals> Cells => cells;
+    public LoadoutItemDefinition SelectedPlaceableItem => selectedPlaceableItem;
     public GameObject SelectedPlaceablePrefab => selectedPlaceablePrefab;
+    public CellVisuals HoveredCell => hoveredCell;
+    public bool SelectedPlaceableCanRotate => selectedPlaceableItem == null || selectedPlaceableItem.CanRotate;
+    public float SelectedRotationDegrees => SelectedPlaceableCanRotate ? selectedRotationSteps * 90f : 0f;
+    public Quaternion SelectedRotation => Quaternion.Euler(0f, 0f, SelectedRotationDegrees);
 
     private struct PlacedItemRecord
     {
@@ -69,9 +80,20 @@ public class GridManager : MonoBehaviour
         if (gameInput != null)
         {
             gameInput.EnableActions();
+            gameInput.RotateLeft += HandleRotateLeft;
+            gameInput.RotateRight += HandleRotateRight;
         }
 
         RegisterGestures();
+    }
+
+    private void OnDisable()
+    {
+        if (gameInput != null)
+        {
+            gameInput.RotateLeft -= HandleRotateLeft;
+            gameInput.RotateRight -= HandleRotateRight;
+        }
     }
 
     private void OnValidate()
@@ -106,16 +128,65 @@ public class GridManager : MonoBehaviour
         RebuildCellCache();
     }
 
-    public void SetSelectedPlaceable(GameObject placeablePrefab)
+    public void SetSelectedPlaceable(GameObject placeablePrefab, bool allowClickPlacement = true)
     {
+        selectedPlaceableItem = null;
         selectedPlaceablePrefab = placeablePrefab;
+        allowSelectedPlaceableClickPlacement = allowClickPlacement;
+        NotifyRotationChanged();
+        RefreshAllCells();
+    }
+
+    public void SetSelectedPlaceable(LoadoutItemDefinition placeableItem, bool allowClickPlacement = true)
+    {
+        selectedPlaceableItem = placeableItem;
+        selectedPlaceablePrefab = placeableItem != null ? placeableItem.PlaceablePrefab : null;
+        allowSelectedPlaceableClickPlacement = allowClickPlacement;
+        if (!SelectedPlaceableCanRotate)
+        {
+            selectedRotationSteps = 0;
+        }
+
+        NotifyRotationChanged();
         RefreshAllCells();
     }
 
     public void ClearSelectedPlaceable()
     {
+        selectedPlaceableItem = null;
         selectedPlaceablePrefab = null;
+        allowSelectedPlaceableClickPlacement = true;
+        selectedRotationSteps = 0;
+        NotifyRotationChanged();
         RefreshAllCells();
+    }
+
+    public void RotateSelectedLeft()
+    {
+        if (selectedPlaceablePrefab == null || !SelectedPlaceableCanRotate)
+        {
+            return;
+        }
+
+        selectedRotationSteps = Mathf.FloorToInt(Mathf.Repeat(selectedRotationSteps - 1, 4));
+        NotifyRotationChanged();
+    }
+
+    public void RotateSelectedRight()
+    {
+        if (selectedPlaceablePrefab == null || !SelectedPlaceableCanRotate)
+        {
+            return;
+        }
+
+        selectedRotationSteps = Mathf.FloorToInt(Mathf.Repeat(selectedRotationSteps + 1, 4));
+        NotifyRotationChanged();
+    }
+
+    public bool TryGetHoveredCell(out CellVisuals cell)
+    {
+        cell = hoveredCell;
+        return cell != null;
     }
 
     public bool RegisterCell(ItemView cellView)
@@ -188,10 +259,15 @@ public class GridManager : MonoBehaviour
 
     public bool TryPlaceSelected(CellVisuals cell)
     {
-        return TryPlacePrefab(selectedPlaceablePrefab, cell);
+        return TryPlacePrefab(selectedPlaceablePrefab, cell, SelectedRotationDegrees);
     }
 
     public bool TryPlacePrefab(GameObject placeablePrefab, CellVisuals cell)
+    {
+        return TryPlacePrefab(placeablePrefab, cell, 0f);
+    }
+
+    public bool TryPlacePrefab(GameObject placeablePrefab, CellVisuals cell, float rotationDegrees)
     {
         if (!CanPlace(placeablePrefab, cell))
         {
@@ -204,11 +280,17 @@ public class GridManager : MonoBehaviour
         }
 
         GameObject instance = Instantiate(placeablePrefab, cell.PlacementAnchor, false);
+        ApplyPlacementTransform(instance.transform, rotationDegrees);
         HandlePlacement(cell, instance, true);
         return true;
     }
 
     public bool TryPlaceExisting(GameObject placeableInstance, CellVisuals cell, bool destroyOnRemove = false)
+    {
+        return TryPlaceExisting(placeableInstance, cell, 0f, destroyOnRemove);
+    }
+
+    public bool TryPlaceExisting(GameObject placeableInstance, CellVisuals cell, float rotationDegrees, bool destroyOnRemove = false)
     {
         if (placeableInstance == null || cell == null || !cells.Contains(cell))
         {
@@ -226,6 +308,7 @@ public class GridManager : MonoBehaviour
         }
 
         placeableInstance.transform.SetParent(cell.PlacementAnchor, false);
+        ApplyPlacementTransform(placeableInstance.transform, rotationDegrees);
         HandlePlacement(cell, placeableInstance, destroyOnRemove);
         return true;
     }
@@ -286,6 +369,7 @@ public class GridManager : MonoBehaviour
             return;
         }
 
+        SetHoveredCell(target);
         target.SetHovered(true);
         target.SetPlacementPreview(selectedPlaceablePrefab != null, CanPlaceSelectedAt(target));
     }
@@ -295,6 +379,11 @@ public class GridManager : MonoBehaviour
         if (target == null)
         {
             return;
+        }
+
+        if (hoveredCell == target)
+        {
+            SetHoveredCell(null);
         }
 
         target.SetPressed(false);
@@ -334,7 +423,10 @@ public class GridManager : MonoBehaviour
 
         if (selectedPlaceablePrefab != null)
         {
-            TryPlaceSelected(target);
+            if (allowSelectedPlaceableClickPlacement)
+            {
+                TryPlaceSelected(target);
+            }
             return;
         }
 
@@ -391,6 +483,17 @@ public class GridManager : MonoBehaviour
         }
     }
 
+    private void SetHoveredCell(CellVisuals cell)
+    {
+        if (hoveredCell == cell)
+        {
+            return;
+        }
+
+        hoveredCell = cell;
+        HoveredCellChanged?.Invoke(hoveredCell);
+    }
+
     private static IGridPlaceable FindPlaceableHandler(GameObject placedItem)
     {
         if (placedItem == null)
@@ -408,5 +511,37 @@ public class GridManager : MonoBehaviour
         }
 
         return null;
+    }
+
+    private void HandleRotateLeft(bool pressed)
+    {
+        if (!pressed)
+        {
+            return;
+        }
+
+        RotateSelectedLeft();
+    }
+
+    private void HandleRotateRight(bool pressed)
+    {
+        if (!pressed)
+        {
+            return;
+        }
+
+        RotateSelectedRight();
+    }
+
+    private static void ApplyPlacementTransform(Transform placeableTransform, float rotationDegrees)
+    {
+        placeableTransform.localPosition = Vector3.zero;
+        placeableTransform.localRotation = Quaternion.Euler(0f, 0f, rotationDegrees);
+        placeableTransform.localScale = Vector3.one;
+    }
+
+    private void NotifyRotationChanged()
+    {
+        SelectedRotationChanged?.Invoke(SelectedRotationDegrees);
     }
 }

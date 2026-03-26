@@ -12,7 +12,6 @@ public class PlayerInteractionDetector : MonoBehaviour
    private void Awake()
    {
       player = GetComponent<PlayerMovement>();
-      gameInput.Interact += OnInteract;
       gameInput.EnableActions();
    }
 
@@ -48,6 +47,5 @@ public class PlayerInteractionDetector : MonoBehaviour
    
    private void OnDisable()
    {
-      gameInput.Interact -= OnInteract;
    }
 }

@@ -8,9 +8,8 @@ using UnityEngine.InputSystem;
 public class GameInput : ScriptableObject, PlayerInputActions.IPlayerActions, PlayerInputActions.IUIActions 
 {
     //Player Actions
-    public event UnityAction<Vector2> Move =  delegate { };
-    public event UnityAction<bool> PrimaryAttack  =  delegate { };
-    public event UnityAction<bool> Interact  =  delegate { };
+   public event UnityAction<bool> RotateRight = delegate { };
+   public event UnityAction<bool> RotateLeft = delegate { };
     
     //UI Actions
     public event UnityAction<bool> Exit  =  delegate { };
@@ -22,12 +21,6 @@ public class GameInput : ScriptableObject, PlayerInputActions.IPlayerActions, Pl
 
 
     private PlayerInputActions inputActions;
-    
-    
-    public Vector2 Direction => inputActions.Player.Move.ReadValue<Vector2>();
-    public bool IsPrimaryAttackPressed => inputActions.Player.PrimaryAttack.IsPressed();
-    public bool IsInteractPressed => inputActions.Player.Interact.IsPressed();
-    
     
     public void EnableActions()
     {
@@ -42,21 +35,6 @@ public class GameInput : ScriptableObject, PlayerInputActions.IPlayerActions, Pl
         inputActions.UI.Enable();
     }
     
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        Move.Invoke(context.ReadValue<Vector2>());
-    }
-
-    void PlayerInputActions.IPlayerActions.OnInteract(InputAction.CallbackContext context)
-    {
-        Interact.Invoke(context.phase == InputActionPhase.Performed);
-    }
-
-    void PlayerInputActions.IPlayerActions.OnPrimaryAttack(InputAction.CallbackContext context)
-    {
-        PrimaryAttack.Invoke(context.phase == InputActionPhase.Performed);
-    }
-
     void PlayerInputActions.IUIActions.OnExit(InputAction.CallbackContext context)
     {
         Exit.Invoke(context.phase == InputActionPhase.Performed);
@@ -86,5 +64,15 @@ public class GameInput : ScriptableObject, PlayerInputActions.IPlayerActions, Pl
     public void OnTabNavigation(InputAction.CallbackContext context)
     {
         TabNav.Invoke(context.ReadValue<float>());
+    }
+
+    public void OnRotateRight(InputAction.CallbackContext context)
+    {
+        RotateRight.Invoke(context.phase == InputActionPhase.Performed);
+    }
+
+    public void OnRotateLeft(InputAction.CallbackContext context)
+    {
+        RotateLeft.Invoke(context.phase == InputActionPhase.Performed);
     }
 }

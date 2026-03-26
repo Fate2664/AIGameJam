@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa70970d5268e54fb3af618ca508ee1, type: 3}
+  m_Name: SpikeTrap
+  m_EditorClassIdentifier: Assembly-CSharp::LoadoutItemDefinition
+  DisplayName: SpikeTrap
+  Icon: {fileID: -4335869784810498554, guid: 4028a588261f92e4f8a4d256043a50a0, type: 3}
+  Cost: 0
+  CanRotate: 0
+  PlaceablePrefab: {fileID: 7362123939305927272, guid: 3a8cd16694896bc468f91f449f437c3a, type: 3}
