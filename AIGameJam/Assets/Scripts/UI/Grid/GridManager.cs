@@ -17,6 +17,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] private bool allowReplacingPlacedItems = false;
     [SerializeField] private bool allowRemovingPlacedItems = true;
     [SerializeField] private List<ItemView> cellViews = new();
+    [SerializeField] [Min(0f)] private float worldPositionLookupPadding = 0.05f;
     
     private LoadoutItemDefinition selectedPlaceableItem = null;
     private GameObject selectedPlaceablePrefab = null;
@@ -26,17 +27,20 @@ public class GridManager : MonoBehaviour
     private bool allowSelectedPlaceableClickPlacement = true;
     private CellVisuals hoveredCell;
     private int selectedRotationSteps;
+    private bool placementPhaseActive = true;
 
     public event Action<CellVisuals> CellClicked;
     public event Action<CellVisuals, GameObject> CellItemPlaced;
     public event Action<CellVisuals, GameObject> CellItemRemoved;
     public event Action<CellVisuals> HoveredCellChanged;
     public event Action<float> SelectedRotationChanged;
+    public event Action<bool> PlacementPhaseChanged;
 
     public IReadOnlyList<CellVisuals> Cells => cells;
     public LoadoutItemDefinition SelectedPlaceableItem => selectedPlaceableItem;
     public GameObject SelectedPlaceablePrefab => selectedPlaceablePrefab;
     public CellVisuals HoveredCell => hoveredCell;
+    public bool PlacementPhaseActive => placementPhaseActive;
     public bool SelectedPlaceableCanRotate => selectedPlaceableItem == null || selectedPlaceableItem.CanRotate;
     public float SelectedRotationDegrees => SelectedPlaceableCanRotate ? selectedRotationSteps * 90f : 0f;
     public Quaternion SelectedRotation => Quaternion.Euler(0f, 0f, SelectedRotationDegrees);
@@ -237,9 +241,53 @@ public class GridManager : MonoBehaviour
         return false;
     }
 
+    public bool TryGetCellAtWorldPosition(Vector2 worldPosition, out CellVisuals cell)
+    {
+        cell = null;
+        float bestDistanceSquared = float.MaxValue;
+
+        for (int i = 0; i < cells.Count; i++)
+        {
+            CellVisuals candidate = cells[i];
+            if (candidate == null || !candidate.ContainsWorldPosition(worldPosition, worldPositionLookupPadding))
+            {
+                continue;
+            }
+
+            float distanceSquared = ((Vector2)candidate.WorldPosition - worldPosition).sqrMagnitude;
+            if (distanceSquared >= bestDistanceSquared)
+            {
+                continue;
+            }
+
+            bestDistanceSquared = distanceSquared;
+            cell = candidate;
+        }
+
+        return cell != null;
+    }
+
+    public bool TryGetPlacedItemAtWorldPosition(Vector2 worldPosition, out GameObject placedItem)
+    {
+        return TryGetPlacedItemAtWorldPosition(worldPosition, out _, out placedItem);
+    }
+
+    public bool TryGetPlacedItemAtWorldPosition(Vector2 worldPosition, out CellVisuals cell, out GameObject placedItem)
+    {
+        if (!TryGetCellAtWorldPosition(worldPosition, out cell))
+        {
+            placedItem = null;
+            return false;
+        }
+
+        return TryGetPlacedItem(cell, out placedItem);
+    }
+
     public bool CanPlaceSelectedAt(CellVisuals cell)
     {
-        return CanPlace(selectedPlaceablePrefab, cell);
+        return placementPhaseActive &&
+               CanPlace(selectedPlaceablePrefab, cell) &&
+               CanAffordSelectedPlaceable();
     }
 
     public bool CanPlace(GameObject placeablePrefab, CellVisuals cell)
@@ -259,7 +307,45 @@ public class GridManager : MonoBehaviour
 
     public bool TryPlaceSelected(CellVisuals cell)
     {
+        if (!placementPhaseActive || !CanPlaceSelectedAt(cell))
+        {
+            return false;
+        }
+
         return TryPlacePrefab(selectedPlaceablePrefab, cell, SelectedRotationDegrees);
+    }
+
+    public void SetPlacementPhaseActive(bool active)
+    {
+        if (placementPhaseActive == active)
+        {
+            return;
+        }
+
+        placementPhaseActive = active;
+
+        if (!placementPhaseActive)
+        {
+            ClearTransientCellState();
+        }
+
+        RefreshAllCells();
+        PlacementPhaseChanged?.Invoke(placementPhaseActive);
+    }
+
+    public void ShowPlacementGrid()
+    {
+        SetPlacementPhaseActive(true);
+    }
+
+    public void HidePlacementGridForWave()
+    {
+        SetPlacementPhaseActive(false);
+    }
+
+    public void HideEmptyCellsForWave()
+    {
+        HidePlacementGridForWave();
     }
 
     public bool TryPlacePrefab(GameObject placeablePrefab, CellVisuals cell)
@@ -362,10 +448,28 @@ public class GridManager : MonoBehaviour
         gesturesRegistered = true;
     }
 
+    private bool CanAffordSelectedPlaceable()
+    {
+        LoadoutMenu loadoutMenu = LoadoutMenu.Instance;
+        if (loadoutMenu == null || !loadoutMenu.EnforceBudget || selectedPlaceableItem == null)
+        {
+            return true;
+        }
+
+        return loadoutMenu.CanAfford(selectedPlaceableItem);
+    }
+
     private void HandleCellHover(Gesture.OnHover evt, CellVisuals target)
     {
         if (target == null)
         {
+            return;
+        }
+
+        if (!placementPhaseActive)
+        {
+            target.ClearInteractionState();
+            target.SetPlacementPreview(false, false);
             return;
         }
 
@@ -378,6 +482,18 @@ public class GridManager : MonoBehaviour
     {
         if (target == null)
         {
+            return;
+        }
+
+        if (!placementPhaseActive)
+        {
+            target.ClearInteractionState();
+            target.SetPlacementPreview(false, false);
+            if (hoveredCell == target)
+            {
+                SetHoveredCell(null);
+            }
+
             return;
         }
 
@@ -398,6 +514,13 @@ public class GridManager : MonoBehaviour
             return;
         }
 
+        if (!placementPhaseActive)
+        {
+            target.ClearInteractionState();
+            target.SetPlacementPreview(false, false);
+            return;
+        }
+
         target.SetPressed(true);
         target.SetPlacementPreview(selectedPlaceablePrefab != null, CanPlaceSelectedAt(target));
     }
@@ -409,6 +532,12 @@ public class GridManager : MonoBehaviour
             return;
         }
 
+        if (!placementPhaseActive)
+        {
+            target.ClearInteractionState();
+            return;
+        }
+
         target.SetPressed(false);
     }
 
@@ -416,6 +545,12 @@ public class GridManager : MonoBehaviour
     {
         if (target == null)
         {
+            return;
+        }
+
+        if (!placementPhaseActive)
+        {
+            target.ClearInteractionState();
             return;
         }
 
@@ -465,8 +600,12 @@ public class GridManager : MonoBehaviour
             return;
         }
 
-        cell.SetOccupied(IsOccupied(cell));
-        cell.SetPlacementPreview(selectedPlaceablePrefab != null, CanPlaceSelectedAt(cell));
+        bool occupied = IsOccupied(cell);
+        bool showPlacementPreview = placementPhaseActive && selectedPlaceablePrefab != null;
+
+        cell.SetOccupied(occupied);
+        cell.SetBackgroundVisible(placementPhaseActive);
+        cell.SetPlacementPreview(showPlacementPreview, showPlacementPreview && CanPlaceSelectedAt(cell));
     }
 
     private void RebuildCellCache()
@@ -492,6 +631,22 @@ public class GridManager : MonoBehaviour
 
         hoveredCell = cell;
         HoveredCellChanged?.Invoke(hoveredCell);
+    }
+
+    private void ClearTransientCellState()
+    {
+        for (int i = 0; i < cells.Count; i++)
+        {
+            if (cells[i] == null)
+            {
+                continue;
+            }
+
+            cells[i].ClearInteractionState();
+            cells[i].SetPlacementPreview(false, false);
+        }
+
+        SetHoveredCell(null);
     }
 
     private static IGridPlaceable FindPlaceableHandler(GameObject placedItem)

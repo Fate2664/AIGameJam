@@ -20,6 +20,7 @@ public class CellVisuals : ItemVisuals
     private bool isOccupied;
     private bool hasPlacementSelection;
     private bool canPlaceSelection = true;
+    private bool backgroundVisible = true;
 
     public Transform PlacementAnchor
     {
@@ -39,10 +40,45 @@ public class CellVisuals : ItemVisuals
         }
     }
     public bool IsOccupied => isOccupied;
+    public bool BackgroundVisible => backgroundVisible;
+    public Vector3 WorldPosition => PlacementAnchor != null ? PlacementAnchor.position : Vector3.zero;
+    public Vector2 WorldSize
+    {
+        get
+        {
+            if (Background == null)
+            {
+                return Vector2.zero;
+            }
+
+            Vector2 localSize = Background.CalculatedSize.XY.Value;
+            if (localSize.x <= Mathf.Epsilon || localSize.y <= Mathf.Epsilon)
+            {
+                Vector3 layoutSize = Background.LayoutSize;
+                localSize = new Vector2(layoutSize.x, layoutSize.y);
+            }
+
+            Vector3 scale = Background.transform.lossyScale;
+            return new Vector2(localSize.x * Mathf.Abs(scale.x), localSize.y * Mathf.Abs(scale.y));
+        }
+    }
 
     private void OnEnable()
     {
         RefreshVisual(true);
+    }
+
+    public bool ContainsWorldPosition(Vector2 worldPosition, float padding = 0f)
+    {
+        Vector2 worldSize = WorldSize;
+        if (worldSize.x <= Mathf.Epsilon || worldSize.y <= Mathf.Epsilon)
+        {
+            return false;
+        }
+
+        Vector2 extents = (worldSize * 0.5f) + Vector2.one * Mathf.Max(0f, padding);
+        Vector2 delta = worldPosition - (Vector2)WorldPosition;
+        return Mathf.Abs(delta.x) <= extents.x && Mathf.Abs(delta.y) <= extents.y;
     }
 
     public void SetHovered(bool hovered)
@@ -53,6 +89,13 @@ public class CellVisuals : ItemVisuals
             isPressed = false;
         }
 
+        RefreshVisual();
+    }
+
+    public void ClearInteractionState()
+    {
+        isHovered = false;
+        isPressed = false;
         RefreshVisual();
     }
 
@@ -75,6 +118,17 @@ public class CellVisuals : ItemVisuals
         RefreshVisual();
     }
 
+    public void SetBackgroundVisible(bool visible)
+    {
+        if (backgroundVisible == visible)
+        {
+            return;
+        }
+
+        backgroundVisible = visible;
+        RefreshVisual(true);
+    }
+
     private void RefreshVisual(bool immediate = false)
     {
         if (Background == null)
@@ -82,8 +136,14 @@ public class CellVisuals : ItemVisuals
             return;
         }
 
+        Background.Visible = backgroundVisible;
         Color targetColor = ResolveColor();
         DOTween.Kill(Background);
+
+        if (!backgroundVisible)
+        {
+            return;
+        }
 
         if (immediate || ColorTweenDuration <= 0f)
         {

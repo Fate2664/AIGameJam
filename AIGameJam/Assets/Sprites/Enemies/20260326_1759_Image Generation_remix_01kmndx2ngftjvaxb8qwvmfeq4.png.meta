@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 141e70b01b565b84ca4169c0dab7aba0
+guid: 1ab82bd3590f95c4695bbde7b738dfb7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1859629575590064947
-    second: BaseAlien_0
+      213: 2742148783502607542
+    second: 20260326_1759_Image Generation_remix_01kmndx2ngftjvaxb8qwvmfeq4_0
+  - first:
+      213: 4829967953503797842
+    second: 20260326_1759_Image Generation_remix_01kmndx2ngftjvaxb8qwvmfeq4_1
+  - first:
+      213: -6051114863021027788
+    second: 20260326_1759_Image Generation_remix_01kmndx2ngftjvaxb8qwvmfeq4_2
+  - first:
+      213: 2941297116616877928
+    second: 20260326_1759_Image Generation_remix_01kmndx2ngftjvaxb8qwvmfeq4_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +81,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,23 +109,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BaseAlien_0
+      name: 20260326_1759_Image Generation_remix_01kmndx2ngftjvaxb8qwvmfeq4_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 48
-        width: 75
-        height: 88
+        x: 54
+        y: 312
+        width: 394
+        height: 442
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dccc425f0c44136e0800000000000000
-      internalID: -1859629575590064947
+      spriteID: 6b441f14ac11e0620800000000000000
+      internalID: 2742148783502607542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20260326_1759_Image Generation_remix_01kmndx2ngftjvaxb8qwvmfeq4_1
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 346
+        width: 371
+        height: 361
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2524d11734e770340800000000000000
+      internalID: 4829967953503797842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20260326_1759_Image Generation_remix_01kmndx2ngftjvaxb8qwvmfeq4_2
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 311
+        width: 344
+        height: 413
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e8b8e971f160ca0800000000000000
+      internalID: -6051114863021027788
       vertices: []
       indices: 
       edges: []
@@ -125,7 +178,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f57548b221c51b94db0ae789d9f4ab48
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +188,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BaseAlien_0: -1859629575590064947
+      20260326_1759_Image Generation_remix_01kmndx2ngftjvaxb8qwvmfeq4_0: 2742148783502607542
+      20260326_1759_Image Generation_remix_01kmndx2ngftjvaxb8qwvmfeq4_1: 4829967953503797842
+      20260326_1759_Image Generation_remix_01kmndx2ngftjvaxb8qwvmfeq4_2: -6051114863021027788
+      20260326_1759_Image Generation_remix_01kmndx2ngftjvaxb8qwvmfeq4_3: 2941297116616877928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -68,6 +68,7 @@ public class LoadoutMenu : MonoBehaviour
         if (GridManager != null)
         {
             GridManager.SelectedRotationChanged += HandleSelectedRotationChanged;
+            GridManager.CellItemPlaced += HandleGridItemPlaced;
         }
 
         LoadoutList.SetDataSource(CurrentLoadout);
@@ -81,6 +82,7 @@ public class LoadoutMenu : MonoBehaviour
         if (GridManager != null)
         {
             GridManager.SelectedRotationChanged -= HandleSelectedRotationChanged;
+            GridManager.CellItemPlaced -= HandleGridItemPlaced;
         }
 
         CancelActiveDrag();
@@ -239,22 +241,7 @@ public class LoadoutMenu : MonoBehaviour
         }
 
         bool placed = GridManager.TryPlaceSelected(hoveredCell);
-        if (!placed)
-        {
-            return false;
-        }
-
-        if (EnforceBudget)
-        {
-            currentBudget = Mathf.Max(0, currentBudget - draggedItem.Cost);
-            RefreshBudgetVisual();
-            BudgetChanged?.Invoke(currentBudget);
-        }
-
-        RefreshVisibleItems();
-        ValidateSelectedItem();
-        ItemPlaced?.Invoke(draggedItem, hoveredCell);
-        return true;
+        return placed;
     }
 
     private void EndDrag()
@@ -414,5 +401,30 @@ public class LoadoutMenu : MonoBehaviour
         }
 
         DragPreviewRoot.transform.rotation = Quaternion.Euler(0f, 0f, rotationDegrees);
+    }
+
+    private void HandleGridItemPlaced(CellVisuals cell, GameObject placedItem)
+    {
+        if (cell == null || placedItem == null)
+        {
+            return;
+        }
+
+        LoadoutItemDefinition placedDefinition = draggedItem ?? selectedItem;
+        if (placedDefinition == null)
+        {
+            return;
+        }
+
+        if (EnforceBudget)
+        {
+            currentBudget = Mathf.Max(0, currentBudget - placedDefinition.Cost);
+            RefreshBudgetVisual();
+            BudgetChanged?.Invoke(currentBudget);
+        }
+
+        RefreshVisibleItems();
+        ValidateSelectedItem();
+        ItemPlaced?.Invoke(placedDefinition, cell);
     }
 }

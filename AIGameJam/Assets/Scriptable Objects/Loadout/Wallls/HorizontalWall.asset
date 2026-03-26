@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadoutItemDefinition
   DisplayName: Horiontal Wall
   Icon: {fileID: -9139397426893953942, guid: d597fd544aa004f4297e97c54b9e8eb1, type: 3}
-  Cost: 0
+  Cost: 25
   CanRotate: 1
   PlaceablePrefab: {fileID: 8375640912004650787, guid: 4932668a4d5f9fa489bd5bf616362bc6, type: 3}
