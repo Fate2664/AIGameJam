@@ -77,7 +77,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: -0.5
+        Raw: -0.6
         Type: 0
       Z:
         Raw: 0
@@ -1101,7 +1101,7 @@ MonoBehaviour:
       Mode: 1
     SoftenEdges: 1
     FillEnabled: 1
-  texture: {fileID: 2800000, guid: 5e3dfcce17ce558489b845b9b0e4a802, type: 3}
+  texture: {fileID: 2800000, guid: 00c83a575e3bd0949bb2916d4c041b13, type: 3}
   sprite: {fileID: 0}
 --- !u!1 &7445778269972398036
 GameObject:

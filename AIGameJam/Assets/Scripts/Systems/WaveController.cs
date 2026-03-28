@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [DisallowMultipleComponent]
 public class WaveController : MonoBehaviour
@@ -10,11 +11,22 @@ public class WaveController : MonoBehaviour
     public class EnemySpawnDefinition
     {
         public EnemyDefinition Enemy = null;
-        public GameObject EnemyPrefab = null;
+        [FormerlySerializedAs("EnemyPrefab")]
+        [SerializeField, HideInInspector] private GameObject legacyEnemyPrefab = null;
         public List<Collider2D> SpawnAreas = new();
         [Min(1)] public int Count = 1;
         [Min(0f)] public float SpawnInterval = 0f;
         public Vector3 PositionOffset = Vector3.zero;
+
+        public GameObject ResolvePrefab()
+        {
+            if (Enemy != null && Enemy.Prefab != null)
+            {
+                return Enemy.Prefab;
+            }
+
+            return legacyEnemyPrefab;
+        }
     }
 
     [Serializable]
@@ -33,6 +45,15 @@ public class WaveController : MonoBehaviour
     [SerializeField] private bool repeatLastConfiguredWave = true;
     [SerializeField] [Min(1)] private int spawnAreaSampleAttempts = 24;
     [SerializeField] private List<WaveDefinition> waves = new();
+
+    [Header("Automatic Waves")]
+    [SerializeField] private bool autoGenerateWavesAfterConfigured = true;
+    [SerializeField] private bool autoStartGeneratedWaves = true;
+    [SerializeField] [Min(1)] private int automaticWaveStartNumber = 4;
+    [SerializeField] [Min(1)] private int automaticBaseEnemyCount = 20;
+    [SerializeField] [Min(0)] private int automaticTankEnemyCount = 10;
+    [SerializeField] [Min(0)] private int automaticBossEnemyCount = 7;
+    [SerializeField] [Min(0)] private int automaticEnemyCountIncreasePerWave = 5;
 
     private readonly List<GameObject> activeEnemies = new();
     private readonly List<Collider2D> spawnAreaBuffer = new();
@@ -125,7 +146,7 @@ public class WaveController : MonoBehaviour
             for (int spawnIndex = 0; spawnIndex < spawns.Count; spawnIndex++)
             {
                 EnemySpawnDefinition spawn = spawns[spawnIndex];
-                if (spawn == null || ResolveEnemyPrefab(spawn) == null)
+                if (spawn == null || spawn.ResolvePrefab() == null)
                 {
                     continue;
                 }
@@ -167,27 +188,41 @@ public class WaveController : MonoBehaviour
         }
 
         waveActive = false;
+        CurrencyPickup.CollectAllInScene();
         if (autoReturnToPlacementWhenCleared)
         {
             gridManager?.ShowPlacementGrid();
         }
 
         WaveCompleted?.Invoke(currentWaveNumber);
+
+        if (ShouldAutoStartNextWave())
+        {
+            StartNextWave();
+        }
     }
 
     private bool TryGetNextWaveDefinition(out WaveDefinition wave)
     {
+        if (waves != null)
+        {
+            int requestedIndex = nextWaveNumber - 1;
+            if (requestedIndex < waves.Count)
+            {
+                wave = waves[requestedIndex];
+                return true;
+            }
+        }
+
+        if (TryGenerateAutomaticWave(nextWaveNumber, out wave))
+        {
+            return true;
+        }
+
         if (waves == null || waves.Count == 0)
         {
             wave = null;
             return false;
-        }
-
-        int requestedIndex = nextWaveNumber - 1;
-        if (requestedIndex < waves.Count)
-        {
-            wave = waves[requestedIndex];
-            return true;
         }
 
         if (repeatLastConfiguredWave)
@@ -200,9 +235,108 @@ public class WaveController : MonoBehaviour
         return false;
     }
 
+    private bool TryGenerateAutomaticWave(int waveNumber, out WaveDefinition wave)
+    {
+        wave = null;
+        if (!autoGenerateWavesAfterConfigured || waveNumber < automaticWaveStartNumber)
+        {
+            return false;
+        }
+
+        if (!TryCreateGeneratedSpawn(EnemyType.Base, ResolveAutomaticEnemyCount(waveNumber, automaticBaseEnemyCount), out EnemySpawnDefinition baseSpawn) ||
+            !TryCreateGeneratedSpawn(EnemyType.Tank, ResolveAutomaticEnemyCount(waveNumber, automaticTankEnemyCount), out EnemySpawnDefinition tankSpawn) ||
+            !TryCreateGeneratedSpawn(EnemyType.Boss, ResolveAutomaticEnemyCount(waveNumber, automaticBossEnemyCount), out EnemySpawnDefinition bossSpawn))
+        {
+            return false;
+        }
+
+        wave = new WaveDefinition
+        {
+            Name = $"Wave {waveNumber}",
+            Spawns = new List<EnemySpawnDefinition>
+            {
+                baseSpawn,
+                tankSpawn,
+                bossSpawn,
+            },
+        };
+
+        return true;
+    }
+
+    private bool TryCreateGeneratedSpawn(EnemyType enemyType, int count, out EnemySpawnDefinition generatedSpawn)
+    {
+        generatedSpawn = null;
+        if (count <= 0)
+        {
+            return false;
+        }
+
+        EnemySpawnDefinition template = FindSpawnTemplate(enemyType);
+        if (template == null)
+        {
+            Debug.LogWarning($"WaveController could not find a configured spawn template for enemy type '{enemyType}'.", this);
+            return false;
+        }
+
+        generatedSpawn = new EnemySpawnDefinition
+        {
+            Enemy = template.Enemy,
+            SpawnAreas = template.SpawnAreas != null ? new List<Collider2D>(template.SpawnAreas) : new List<Collider2D>(),
+            Count = count,
+            SpawnInterval = template.SpawnInterval,
+            PositionOffset = template.PositionOffset,
+        };
+
+        return generatedSpawn.ResolvePrefab() != null;
+    }
+
+    private EnemySpawnDefinition FindSpawnTemplate(EnemyType enemyType)
+    {
+        if (waves == null)
+        {
+            return null;
+        }
+
+        for (int waveIndex = waves.Count - 1; waveIndex >= 0; waveIndex--)
+        {
+            WaveDefinition wave = waves[waveIndex];
+            if (wave?.Spawns == null)
+            {
+                continue;
+            }
+
+            for (int spawnIndex = 0; spawnIndex < wave.Spawns.Count; spawnIndex++)
+            {
+                EnemySpawnDefinition spawn = wave.Spawns[spawnIndex];
+                if (spawn?.Enemy == null || spawn.Enemy.EnemyType != enemyType)
+                {
+                    continue;
+                }
+
+                return spawn;
+            }
+        }
+
+        return null;
+    }
+
+    private int ResolveAutomaticEnemyCount(int waveNumber, int startingCount)
+    {
+        int generatedWaveIndex = Mathf.Max(0, waveNumber - automaticWaveStartNumber);
+        return startingCount + generatedWaveIndex * automaticEnemyCountIncreasePerWave;
+    }
+
+    private bool ShouldAutoStartNextWave()
+    {
+        return autoStartGeneratedWaves &&
+               autoGenerateWavesAfterConfigured &&
+               nextWaveNumber >= automaticWaveStartNumber;
+    }
+
     private void SpawnEnemy(EnemySpawnDefinition spawn)
     {
-        GameObject enemyPrefab = ResolveEnemyPrefab(spawn);
+        GameObject enemyPrefab = spawn != null ? spawn.ResolvePrefab() : null;
         if (spawn == null || enemyPrefab == null)
         {
             return;
@@ -362,7 +496,7 @@ public class WaveController : MonoBehaviour
             for (int spawnIndex = 0; spawnIndex < wave.Spawns.Count; spawnIndex++)
             {
                 EnemySpawnDefinition spawn = wave.Spawns[spawnIndex];
-                GameObject enemyPrefab = ResolveEnemyPrefab(spawn);
+                GameObject enemyPrefab = spawn != null ? spawn.ResolvePrefab() : null;
                 if (enemyPrefab == null || !enemyPrefab.scene.IsValid())
                 {
                     continue;
@@ -371,21 +505,6 @@ public class WaveController : MonoBehaviour
                 enemyPrefab.SetActive(false);
             }
         }
-    }
-
-    private static GameObject ResolveEnemyPrefab(EnemySpawnDefinition spawn)
-    {
-        if (spawn == null)
-        {
-            return null;
-        }
-
-        if (spawn.Enemy != null && spawn.Enemy.Prefab != null)
-        {
-            return spawn.Enemy.Prefab;
-        }
-
-        return spawn.EnemyPrefab;
     }
 
     private static void InitializeEnemy(GameObject enemyInstance, EnemyDefinition enemyDefinition)

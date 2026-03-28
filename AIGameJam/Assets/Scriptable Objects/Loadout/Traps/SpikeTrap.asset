@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadoutItemDefinition
   DisplayName: SpikeTrap
   Icon: {fileID: -4335869784810498554, guid: 4028a588261f92e4f8a4d256043a50a0, type: 3}
-  Cost: 50
+  Cost: 5
+  ItemType: 0
+  WallHealth: 0
   CanRotate: 0
   PlaceablePrefab: {fileID: 7362123939305927272, guid: 3a8cd16694896bc468f91f449f437c3a, type: 3}

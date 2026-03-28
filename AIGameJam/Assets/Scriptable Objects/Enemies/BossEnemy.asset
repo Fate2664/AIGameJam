@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Boss Enemy
   enemyType: 2
-  prefab: {fileID: 7340000000000000000, guid: c6f1bdbaf6354b879742f0c749f0f5e0, type: 3}
-  sprite: {fileID: -6051114863021027788, guid: 1ab82bd3590f95c4695bbde7b738dfb7, type: 3}
+  prefab: {fileID: 7340000000000000000, guid: 30b9bfedf5db46758ab82b69b1bf2f89, type: 3}
+  sprite: {fileID: 2742148783502607542, guid: 1ab82bd3590f95c4695bbde7b738dfb7, type: 3}
   stats:
     MaxHealth: 120
     Damage: 20
-    MovementSpeed: 1.75
+    MovementSpeed: 0.75
+    StructureDamageInterval: 0.75
   movement:
     LateralWobbleAmplitude: 0.1
     LateralWobbleFrequency: 0.95

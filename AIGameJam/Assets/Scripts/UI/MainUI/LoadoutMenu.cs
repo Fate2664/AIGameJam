@@ -8,11 +8,16 @@ using UnityEngine;
 public class LoadoutMenu : MonoBehaviour
 {
     private static readonly List<LoadoutItemDefinition> EmptyLoadout = new();
+    private const int UiSortGroupOrder = 500;
+    private const int UiSortGroupRenderQueue = 4000;
+    private const float RootPlaneDistanceFromCamera = 1f;
+    private const string ResetGridButtonObjectName = "ResetGridButton";
 
     public static LoadoutMenu Instance;
 
     public UIBlock Root = null;
     public GridManager GridManager = null;
+    [SerializeField] private List<GridManager> additionalGridManagers = new();
     public ListView LoadoutList = null;
     public LoadoutCollection Loadout = null;
 
@@ -32,6 +37,10 @@ public class LoadoutMenu : MonoBehaviour
     private LoadoutItemDefinition draggedItem;
     private LoadoutItemDefinition selectedItem;
     private bool isDragging;
+    private readonly List<GridManager> managedGridManagers = new();
+    private int lastGridResetFrame = -1;
+    private Button resetGridButton;
+    private bool resetGridRequestPending;
 
     public event Action<LoadoutItemDefinition> DragStarted;
     public event Action<LoadoutItemDefinition> DragCanceled;
@@ -50,10 +59,13 @@ public class LoadoutMenu : MonoBehaviour
         }
 
         Instance = this;
+        ConfigureUiSorting();
+        RebuildManagedGridManagers();
     }
 
     private void Start()
     {
+        ConfigureUiSorting();
         currentBudget = StartingBudget;
 
         LoadoutList.AddDataBinder<LoadoutItemDefinition, LoadoutItemVisuals>(BindLoadoutItem);
@@ -65,11 +77,8 @@ public class LoadoutMenu : MonoBehaviour
         Root.AddGestureHandler<Gesture.OnCancel, LoadoutItemVisuals>(HandleItemCancel);
         Root.AddGestureHandler<Gesture.OnClick, LoadoutItemVisuals>(HandleItemClick);
 
-        if (GridManager != null)
-        {
-            GridManager.SelectedRotationChanged += HandleSelectedRotationChanged;
-            GridManager.CellItemPlaced += HandleGridItemPlaced;
-        }
+        SubscribeToGridManagers();
+        BindResetGridButton();
 
         LoadoutList.SetDataSource(CurrentLoadout);
         HideDragPreview();
@@ -79,11 +88,8 @@ public class LoadoutMenu : MonoBehaviour
 
     private void OnDisable()
     {
-        if (GridManager != null)
-        {
-            GridManager.SelectedRotationChanged -= HandleSelectedRotationChanged;
-            GridManager.CellItemPlaced -= HandleGridItemPlaced;
-        }
+        UnsubscribeFromGridManagers();
+        UnbindResetGridButton();
 
         CancelActiveDrag();
     }
@@ -117,6 +123,46 @@ public class LoadoutMenu : MonoBehaviour
         LoadoutList.SetDataSource(CurrentLoadout);
         RefreshBudgetVisual();
         RefreshVisibleItems();
+    }
+
+    public void HandleResetGridButtonPressed()
+    {
+        if (!resetGridRequestPending)
+        {
+            return;
+        }
+
+        resetGridRequestPending = false;
+
+        if (lastGridResetFrame == Time.frameCount)
+        {
+            return;
+        }
+
+        lastGridResetFrame = Time.frameCount;
+        CancelActiveDrag();
+        RebuildManagedGridManagers();
+
+        int refundedAmount = 0;
+        for (int i = 0; i < managedGridManagers.Count; i++)
+        {
+            GridManager managedGridManager = managedGridManagers[i];
+            if (managedGridManager == null)
+            {
+                continue;
+            }
+
+            refundedAmount += managedGridManager.ClearPlacedItemsAndCalculateRefund();
+        }
+
+        if (EnforceBudget && refundedAmount > 0)
+        {
+            AddBudget(refundedAmount);
+            return;
+        }
+
+        RefreshVisibleItems();
+        ValidateSelectedItem();
     }
 
     private void HandleItemHover(Gesture.OnHover evt, LoadoutItemVisuals target)
@@ -225,22 +271,22 @@ public class LoadoutMenu : MonoBehaviour
 
     private bool TryPlaceDraggedItem()
     {
-        if (draggedItem == null || GridManager == null || GridManager.SelectedPlaceablePrefab == null || !CanAfford(draggedItem))
+        if (draggedItem == null || !CanAfford(draggedItem))
         {
             return false;
         }
 
-        if (!GridManager.TryGetHoveredCell(out CellVisuals hoveredCell))
+        if (!TryGetHoveredGridManager(out GridManager hoveredGridManager, out CellVisuals hoveredCell))
         {
             return false;
         }
 
-        if (!GridManager.CanPlaceSelectedAt(hoveredCell))
+        if (hoveredGridManager.SelectedPlaceablePrefab == null || !hoveredGridManager.CanPlaceSelectedAt(hoveredCell))
         {
             return false;
         }
 
-        bool placed = GridManager.TryPlaceSelected(hoveredCell);
+        bool placed = hoveredGridManager.TryPlaceSelected(hoveredCell);
         return placed;
     }
 
@@ -255,10 +301,7 @@ public class LoadoutMenu : MonoBehaviour
 
         HideDragPreview();
 
-        if (GridManager != null)
-        {
-            GridManager.SetSelectedPlaceable(selectedItem, true);
-        }
+        SetSelectedPlaceableOnAllManagers(selectedItem, true);
 
         draggedVisual = null;
         draggedItem = null;
@@ -313,7 +356,8 @@ public class LoadoutMenu : MonoBehaviour
 
         DragPreviewRoot.Visible = true;
         DragPreviewRoot.transform.position = pointerWorldPosition;
-        DragPreviewRoot.transform.rotation = GridManager != null ? GridManager.SelectedRotation : Quaternion.identity;
+        GridManager rotationGridManager = ResolveRotationSourceGridManager();
+        DragPreviewRoot.transform.rotation = rotationGridManager != null ? rotationGridManager.SelectedRotation : Quaternion.identity;
 
         if (DragPreviewImage != null)
         {
@@ -363,10 +407,7 @@ public class LoadoutMenu : MonoBehaviour
     private void SelectItem(LoadoutItemDefinition item, bool allowClickPlacement)
     {
         selectedItem = item;
-        if (GridManager != null)
-        {
-            GridManager.SetSelectedPlaceable(selectedItem, allowClickPlacement);
-        }
+        SetSelectedPlaceableOnAllManagers(selectedItem, allowClickPlacement);
     }
 
     private void ValidateSelectedItem()
@@ -379,18 +420,24 @@ public class LoadoutMenu : MonoBehaviour
         if (!CanAfford(selectedItem) || selectedItem.PlaceablePrefab == null)
         {
             selectedItem = null;
-            if (!isDragging && GridManager != null)
+            if (!isDragging)
             {
-                GridManager.ClearSelectedPlaceable();
+                ClearSelectedPlaceableOnAllManagers();
             }
 
             return;
         }
 
-        if (!isDragging && GridManager != null)
+        if (!isDragging)
         {
-            GridManager.SetSelectedPlaceable(selectedItem, true);
+            SetSelectedPlaceableOnAllManagers(selectedItem, true);
         }
+    }
+
+    private void HandleRuntimeResetGridButtonClicked()
+    {
+        resetGridRequestPending = true;
+        HandleResetGridButtonPressed();
     }
 
     private void HandleSelectedRotationChanged(float rotationDegrees)
@@ -401,6 +448,168 @@ public class LoadoutMenu : MonoBehaviour
         }
 
         DragPreviewRoot.transform.rotation = Quaternion.Euler(0f, 0f, rotationDegrees);
+    }
+
+    private void RebuildManagedGridManagers()
+    {
+        managedGridManagers.Clear();
+        TryAddManagedGridManager(GridManager);
+
+        for (int i = 0; i < additionalGridManagers.Count; i++)
+        {
+            TryAddManagedGridManager(additionalGridManagers[i]);
+        }
+
+        GridManager[] discoveredGridManagers = FindObjectsByType<GridManager>(FindObjectsSortMode.None);
+        for (int i = 0; i < discoveredGridManagers.Length; i++)
+        {
+            TryAddManagedGridManager(discoveredGridManagers[i]);
+        }
+    }
+
+    private void SubscribeToGridManagers()
+    {
+        RebuildManagedGridManagers();
+
+        for (int i = 0; i < managedGridManagers.Count; i++)
+        {
+            GridManager managedGridManager = managedGridManagers[i];
+            if (managedGridManager == null)
+            {
+                continue;
+            }
+
+            managedGridManager.SelectedRotationChanged += HandleSelectedRotationChanged;
+            managedGridManager.CellItemPlaced += HandleGridItemPlaced;
+        }
+    }
+
+    private void UnsubscribeFromGridManagers()
+    {
+        for (int i = 0; i < managedGridManagers.Count; i++)
+        {
+            GridManager managedGridManager = managedGridManagers[i];
+            if (managedGridManager == null)
+            {
+                continue;
+            }
+
+            managedGridManager.SelectedRotationChanged -= HandleSelectedRotationChanged;
+            managedGridManager.CellItemPlaced -= HandleGridItemPlaced;
+        }
+    }
+
+    private void SetSelectedPlaceableOnAllManagers(LoadoutItemDefinition item, bool allowClickPlacement)
+    {
+        for (int i = 0; i < managedGridManagers.Count; i++)
+        {
+            GridManager managedGridManager = managedGridManagers[i];
+            if (managedGridManager != null)
+            {
+                managedGridManager.SetSelectedPlaceable(item, allowClickPlacement);
+            }
+        }
+    }
+
+    private void ClearSelectedPlaceableOnAllManagers()
+    {
+        for (int i = 0; i < managedGridManagers.Count; i++)
+        {
+            GridManager managedGridManager = managedGridManagers[i];
+            if (managedGridManager != null)
+            {
+                managedGridManager.ClearSelectedPlaceable();
+            }
+        }
+    }
+
+    private bool TryGetHoveredGridManager(out GridManager hoveredGridManager, out CellVisuals hoveredCell)
+    {
+        for (int i = 0; i < managedGridManagers.Count; i++)
+        {
+            GridManager managedGridManager = managedGridManagers[i];
+            if (managedGridManager == null || !managedGridManager.TryGetHoveredCell(out hoveredCell))
+            {
+                continue;
+            }
+
+            hoveredGridManager = managedGridManager;
+            return true;
+        }
+
+        hoveredGridManager = null;
+        hoveredCell = null;
+        return false;
+    }
+
+    private GridManager ResolveRotationSourceGridManager()
+    {
+        if (GridManager != null)
+        {
+            return GridManager;
+        }
+
+        for (int i = 0; i < managedGridManagers.Count; i++)
+        {
+            if (managedGridManagers[i] != null)
+            {
+                return managedGridManagers[i];
+            }
+        }
+
+        return null;
+    }
+
+    private void TryAddManagedGridManager(GridManager managedGridManager)
+    {
+        if (managedGridManager == null || managedGridManagers.Contains(managedGridManager))
+        {
+            return;
+        }
+
+        managedGridManagers.Add(managedGridManager);
+    }
+
+    private void BindResetGridButton()
+    {
+        UnbindResetGridButton();
+
+        resetGridButton = FindButton(ResetGridButtonObjectName);
+        if (resetGridButton != null)
+        {
+            resetGridButton.OnClicked.AddListener(HandleRuntimeResetGridButtonClicked);
+        }
+    }
+
+    private void UnbindResetGridButton()
+    {
+        if (resetGridButton != null)
+        {
+            resetGridButton.OnClicked.RemoveListener(HandleRuntimeResetGridButtonClicked);
+            resetGridButton = null;
+        }
+    }
+
+    private static Button FindButton(string buttonObjectName)
+    {
+        if (string.IsNullOrWhiteSpace(buttonObjectName))
+        {
+            return null;
+        }
+
+        Button[] buttons = FindObjectsByType<Button>(FindObjectsSortMode.None);
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            Button button = buttons[i];
+            if (button == null || !string.Equals(button.name, buttonObjectName, StringComparison.OrdinalIgnoreCase))
+            {
+                continue;
+            }
+
+            return button;
+        }
+
+        return null;
     }
 
     private void HandleGridItemPlaced(CellVisuals cell, GameObject placedItem)
@@ -426,5 +635,59 @@ public class LoadoutMenu : MonoBehaviour
         RefreshVisibleItems();
         ValidateSelectedItem();
         ItemPlaced?.Invoke(placedDefinition, cell);
+    }
+
+    private void ConfigureUiSorting()
+    {
+        ConfigureSortGroup(Root);
+        ConfigureWorldSpaceDepth(Root);
+    }
+
+    private static void ConfigureSortGroup(UIBlock rootBlock)
+    {
+        if (rootBlock == null)
+        {
+            return;
+        }
+
+        SortGroup sortGroup = rootBlock.GetComponent<SortGroup>();
+        if (sortGroup == null)
+        {
+            sortGroup = rootBlock.gameObject.AddComponent<SortGroup>();
+        }
+
+        sortGroup.SortingOrder = UiSortGroupOrder;
+        sortGroup.RenderQueue = UiSortGroupRenderQueue;
+        sortGroup.RenderOverOpaqueGeometry = true;
+    }
+
+    private void ConfigureWorldSpaceDepth(UIBlock rootBlock)
+    {
+        if (rootBlock == null)
+        {
+            return;
+        }
+
+        Camera uiCamera = Camera.main;
+        if (uiCamera == null)
+        {
+            uiCamera = FindAnyObjectByType<Camera>();
+        }
+
+        Transform rootTransform = rootBlock.transform;
+        Transform parent = rootTransform.parent;
+        if (uiCamera == null || parent == null)
+        {
+            return;
+        }
+
+        Vector3 desiredWorldPosition = rootTransform.position;
+        desiredWorldPosition.z = uiCamera.transform.position.z + RootPlaneDistanceFromCamera;
+
+        Vector3 desiredLocalPosition = parent.InverseTransformPoint(desiredWorldPosition);
+        rootTransform.localPosition = new Vector3(
+            rootTransform.localPosition.x,
+            rootTransform.localPosition.y,
+            desiredLocalPosition.z);
     }
 }

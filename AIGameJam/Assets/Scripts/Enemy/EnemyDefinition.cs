@@ -27,7 +27,7 @@ public class EnemyDefinition : ScriptableObject, IEnemyDefinition
     [SerializeField] private EnemyType enemyType = EnemyType.Base;
     [SerializeField] private GameObject prefab = null;
     [SerializeField] private Sprite sprite = null;
-    [SerializeField] private EnemyStats stats = new(10f, 1f, 2f);
+    [SerializeField] private EnemyStats stats = new(10f, 1f, 2f, 0.75f);
     [SerializeField] private EnemyMovementProfile movement = EnemyMovementProfile.Default;
 
     public EnemyType EnemyType => enemyType;

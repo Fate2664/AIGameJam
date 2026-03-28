@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa70970d5268e54fb3af618ca508ee1, type: 3}
+  m_Name: CornerWallLeft
+  m_EditorClassIdentifier: Assembly-CSharp::LoadoutItemDefinition
+  DisplayName: Corner Wall
+  Icon: {fileID: 21300000, guid: f44dfd3ec340d844b897b3b14e9ad3bc, type: 3}
+  Cost: 10
+  ItemType: 1
+  WallHealth: 70
+  CanRotate: 1
+  PlaceablePrefab: {fileID: 5354483031225757843, guid: b8903102c6ec9ec4480aef68218ac5e9, type: 3}

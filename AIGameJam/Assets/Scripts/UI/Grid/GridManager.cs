@@ -18,6 +18,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] private bool allowRemovingPlacedItems = true;
     [SerializeField] private List<ItemView> cellViews = new();
     [SerializeField] [Min(0f)] private float worldPositionLookupPadding = 0.05f;
+    [SerializeField] [Min(0f)] private float enemyPathStrength = 1f;
     
     private LoadoutItemDefinition selectedPlaceableItem = null;
     private GameObject selectedPlaceablePrefab = null;
@@ -41,6 +42,7 @@ public class GridManager : MonoBehaviour
     public GameObject SelectedPlaceablePrefab => selectedPlaceablePrefab;
     public CellVisuals HoveredCell => hoveredCell;
     public bool PlacementPhaseActive => placementPhaseActive;
+    public float EnemyPathStrength => enemyPathStrength;
     public bool SelectedPlaceableCanRotate => selectedPlaceableItem == null || selectedPlaceableItem.CanRotate;
     public float SelectedRotationDegrees => SelectedPlaceableCanRotate ? selectedRotationSteps * 90f : 0f;
     public Quaternion SelectedRotation => Quaternion.Euler(0f, 0f, SelectedRotationDegrees);
@@ -312,7 +314,7 @@ public class GridManager : MonoBehaviour
             return false;
         }
 
-        return TryPlacePrefab(selectedPlaceablePrefab, cell, SelectedRotationDegrees);
+        return TryPlacePrefab(selectedPlaceablePrefab, cell, SelectedRotationDegrees, selectedPlaceableItem);
     }
 
     public void SetPlacementPhaseActive(bool active)
@@ -350,10 +352,15 @@ public class GridManager : MonoBehaviour
 
     public bool TryPlacePrefab(GameObject placeablePrefab, CellVisuals cell)
     {
-        return TryPlacePrefab(placeablePrefab, cell, 0f);
+        return TryPlacePrefab(placeablePrefab, cell, 0f, null);
     }
 
     public bool TryPlacePrefab(GameObject placeablePrefab, CellVisuals cell, float rotationDegrees)
+    {
+        return TryPlacePrefab(placeablePrefab, cell, rotationDegrees, null);
+    }
+
+    private bool TryPlacePrefab(GameObject placeablePrefab, CellVisuals cell, float rotationDegrees, LoadoutItemDefinition placeableDefinition)
     {
         if (!CanPlace(placeablePrefab, cell))
         {
@@ -367,6 +374,7 @@ public class GridManager : MonoBehaviour
 
         GameObject instance = Instantiate(placeablePrefab, cell.PlacementAnchor, false);
         ApplyPlacementTransform(instance.transform, rotationDegrees);
+        InitializePlacedItemInstance(instance, placeableDefinition);
         HandlePlacement(cell, instance, true);
         return true;
     }
@@ -395,8 +403,33 @@ public class GridManager : MonoBehaviour
 
         placeableInstance.transform.SetParent(cell.PlacementAnchor, false);
         ApplyPlacementTransform(placeableInstance.transform, rotationDegrees);
+        InitializePlacedItemInstance(placeableInstance, selectedPlaceableItem);
         HandlePlacement(cell, placeableInstance, destroyOnRemove);
         return true;
+    }
+
+    public int ClearPlacedItemsAndCalculateRefund()
+    {
+        if (placedItems.Count == 0)
+        {
+            return 0;
+        }
+
+        int refundAmount = 0;
+        List<CellVisuals> occupiedCells = new(placedItems.Keys);
+        for (int i = 0; i < occupiedCells.Count; i++)
+        {
+            CellVisuals occupiedCell = occupiedCells[i];
+            if (occupiedCell == null || !placedItems.TryGetValue(occupiedCell, out PlacedItemRecord placedItemRecord))
+            {
+                continue;
+            }
+
+            refundAmount += ResolveRefundAmount(placedItemRecord.Instance);
+            TryRemovePlacedItem(occupiedCell);
+        }
+
+        return refundAmount;
     }
 
     public bool TryRemovePlacedItem(CellVisuals cell)
@@ -431,6 +464,23 @@ public class GridManager : MonoBehaviour
 
         RefreshCell(cell);
         return true;
+    }
+
+    private static int ResolveRefundAmount(GameObject placedItem)
+    {
+        if (placedItem == null)
+        {
+            return 0;
+        }
+
+        PlacedLoadoutItemActor placedItemActor = placedItem.GetComponent<PlacedLoadoutItemActor>();
+        if (placedItemActor == null)
+        {
+            placedItemActor = placedItem.GetComponentInChildren<PlacedLoadoutItemActor>(true);
+        }
+
+        LoadoutItemDefinition definition = placedItemActor != null ? placedItemActor.Definition : null;
+        return definition != null ? Mathf.Max(0, definition.Cost) : 0;
     }
 
     private void RegisterGestures()
@@ -666,6 +716,22 @@ public class GridManager : MonoBehaviour
         }
 
         return null;
+    }
+
+    private static void InitializePlacedItemInstance(GameObject placedItem, LoadoutItemDefinition placeableDefinition)
+    {
+        if (placedItem == null || placeableDefinition == null)
+        {
+            return;
+        }
+
+        PlacedLoadoutItemActor placedItemActor = placedItem.GetComponent<PlacedLoadoutItemActor>();
+        if (placedItemActor == null)
+        {
+            placedItemActor = placedItem.AddComponent<PlacedLoadoutItemActor>();
+        }
+
+        placedItemActor.Initialize(placeableDefinition);
     }
 
     private void HandleRotateLeft(bool pressed)

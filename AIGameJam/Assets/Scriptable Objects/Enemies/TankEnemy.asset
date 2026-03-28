@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Tank Enemy
   enemyType: 1
-  prefab: {fileID: 7340000000000000000, guid: c6f1bdbaf6354b879742f0c749f0f5e0, type: 3}
+  prefab: {fileID: 7340000000000000000, guid: aaa42f972d8e4fa48443386bb253586d, type: 3}
   sprite: {fileID: 4829967953503797842, guid: 1ab82bd3590f95c4695bbde7b738dfb7, type: 3}
   stats:
     MaxHealth: 45
     Damage: 10
-    MovementSpeed: 2.25
+    MovementSpeed: 0.8
+    StructureDamageInterval: 0.75
   movement:
     LateralWobbleAmplitude: 0.08
     LateralWobbleFrequency: 1.05

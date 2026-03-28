@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa70970d5268e54fb3af618ca508ee1, type: 3}
+  m_Name: VerticalWall
+  m_EditorClassIdentifier: Assembly-CSharp::LoadoutItemDefinition
+  DisplayName: Vertical Wall
+  Icon: {fileID: 7094495871914243821, guid: 8c912770155746c49938c4db4dbb7ad3, type: 3}
+  Cost: 10
+  ItemType: 1
+  WallHealth: 70
+  CanRotate: 1
+  PlaceablePrefab: {fileID: 8375640912004650787, guid: 13a3cff7ca93d02459123e485a19105d, type: 3}

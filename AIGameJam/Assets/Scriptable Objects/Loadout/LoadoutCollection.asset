@@ -15,5 +15,9 @@ MonoBehaviour:
   CollectionName: Default Loadout
   Items:
   - {fileID: 11400000, guid: 33ae35b5d61b96e41a2d4f9a2a6ea25f, type: 2}
+  - {fileID: 11400000, guid: 4e48d0e6fe9a2ef468bac3bc639b58cd, type: 2}
   - {fileID: 11400000, guid: f5fc849a4d5e1624f9a720ca8bce3433, type: 2}
+  - {fileID: 11400000, guid: f1802b1de3fa6eb48baac9aa84b3f05e, type: 2}
+  - {fileID: 11400000, guid: e5b6f83aeb042634c93e85ef32ed5b58, type: 2}
+  - {fileID: 11400000, guid: 3fccd9576db126d47a6e7db03491b6f8, type: 2}
   - {fileID: 11400000, guid: e74333a5e6690c74494b36eb69cd50fd, type: 2}

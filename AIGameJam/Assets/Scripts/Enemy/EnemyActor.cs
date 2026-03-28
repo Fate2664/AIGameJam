@@ -1,6 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -17,7 +17,13 @@ public class EnemyActor : MonoBehaviour, IEnemy, IDamageable
     [SerializeField] private EnemyDefinition definition = null;
     [SerializeField] private SpriteRenderer spriteRenderer = null;
     [SerializeField] private bool destroyOnDeath = true;
+    [Header("Currency Drop")]
+    [SerializeField] private GameObject currencyPrefab = null;
+    [SerializeField] [Range(0f, 1f)] private float currencyDropChance = 0.5f;
+    [SerializeField] [Min(0)] private int currencyAmount = 0;
+    [SerializeField] private Vector3 currencySpawnOffset = new(0f, 0.15f, 0f);
     [Header("Damage Feedback")]
+    [SerializeField] private ParticleSystem[] damageParticleSystems = Array.Empty<ParticleSystem>();
     [SerializeField] private Color damageFlashColor = Color.red;
     [SerializeField] [Min(0f)] private float damageFlashDuration = 0.2f;
     [SerializeField] [Min(0.01f)] private float damageFlashSpeed = 0.05f;
@@ -26,9 +32,8 @@ public class EnemyActor : MonoBehaviour, IEnemy, IDamageable
     private readonly Dictionary<int, float> lastHazardDamageTimes = new();
     private float currentHealth;
     private Collider2D[] colliders = Array.Empty<Collider2D>();
-    private Coroutine damageFlashCoroutine;
+    private SpriteDamageFlashEffect damageFlashEffect;
     private Rigidbody2D rb;
-    private Color defaultSpriteColor = Color.white;
     private float knockbackEndTime;
 
     public event Action<EnemyActor> Died;
@@ -42,25 +47,19 @@ public class EnemyActor : MonoBehaviour, IEnemy, IDamageable
 
     private void Reset()
     {
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        CacheDamageFlashRenderers();
+        CacheDamageParticleSystems();
         colliders = GetComponentsInChildren<Collider2D>(true);
     }
 
     private void Awake()
     {
-        if (spriteRenderer == null)
-        {
-            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        }
-
+        CacheDamageFlashRenderers();
+        CacheDamageParticleSystems();
         rb = GetComponent<Rigidbody2D>();
-        if (spriteRenderer != null)
-        {
-            defaultSpriteColor = spriteRenderer.color;
-        }
-
         RefreshColliders();
         ApplyDefinition(definition, true);
+        StopDamageParticles(true);
     }
 
     private void OnEnable()
@@ -71,18 +70,16 @@ public class EnemyActor : MonoBehaviour, IEnemy, IDamageable
     private void OnDisable()
     {
         StopDamageFlash();
+        StopDamageParticles(true);
         UnregisterCollisionsWithOtherEnemies();
     }
 
     private void OnValidate()
     {
-        if (spriteRenderer == null)
-        {
-            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        }
-
         if (!Application.isPlaying)
         {
+            CacheDamageFlashRenderers();
+            CacheDamageParticleSystems();
             ApplyVisuals();
         }
     }
@@ -101,6 +98,7 @@ public class EnemyActor : MonoBehaviour, IEnemy, IDamageable
 
         currentHealth = Mathf.Max(0f, currentHealth - damage);
         PlayDamageFlash();
+        PlayDamageParticles();
         if (currentHealth <= 0f)
         {
             HandleDeath();
@@ -162,6 +160,7 @@ public class EnemyActor : MonoBehaviour, IEnemy, IDamageable
     private void HandleDeath()
     {
         Died?.Invoke(this);
+        TryDropCurrency();
 
         if (destroyOnDeath)
         {
@@ -172,6 +171,66 @@ public class EnemyActor : MonoBehaviour, IEnemy, IDamageable
     private void RefreshColliders()
     {
         colliders = GetComponentsInChildren<Collider2D>(true);
+    }
+
+    private void TryDropCurrency()
+    {
+        if (currencyPrefab == null || currencyDropChance <= 0f)
+        {
+            return;
+        }
+
+        if (UnityEngine.Random.value > currencyDropChance)
+        {
+            return;
+        }
+
+        int droppedCurrencyAmount = ResolveCurrencyAmount();
+        if (droppedCurrencyAmount <= 0)
+        {
+            return;
+        }
+
+        Transform parent = transform.parent;
+        GameObject currencyInstance = parent != null
+            ? Instantiate(currencyPrefab, transform.position + currencySpawnOffset, Quaternion.identity, parent)
+            : Instantiate(currencyPrefab, transform.position + currencySpawnOffset, Quaternion.identity);
+        CurrencyPickup pickup = currencyInstance.GetComponent<CurrencyPickup>();
+        if (pickup == null)
+        {
+            pickup = currencyInstance.AddComponent<CurrencyPickup>();
+        }
+
+        pickup.Initialize(droppedCurrencyAmount);
+    }
+
+    private int ResolveCurrencyAmount()
+    {
+        if (currencyAmount > 0)
+        {
+            return currencyAmount;
+        }
+
+        if (definition != null && definition.Stats.CurrencyReward > 0)
+        {
+            return definition.Stats.CurrencyReward;
+        }
+
+        EnemyType enemyType = definition != null ? definition.EnemyType : EnemyType.Base;
+        return ResolveDefaultCurrencyAmount(enemyType);
+    }
+
+    private static int ResolveDefaultCurrencyAmount(EnemyType enemyType)
+    {
+        switch (enemyType)
+        {
+            case EnemyType.Tank:
+                return 2;
+            case EnemyType.Boss:
+                return 5;
+            default:
+                return 1;
+        }
     }
 
     private void ApplyKnockback(Transform source, float horizontalForce, float verticalForce)
@@ -194,55 +253,185 @@ public class EnemyActor : MonoBehaviour, IEnemy, IDamageable
 
     private void PlayDamageFlash()
     {
-        if (spriteRenderer == null)
+        damageFlashEffect?.Play(damageFlashColor, damageFlashDuration, damageFlashSpeed);
+    }
+
+    private void PlayDamageParticles()
+    {
+        if (damageParticleSystems == null || damageParticleSystems.Length == 0)
         {
             return;
         }
 
-        if (damageFlashCoroutine != null)
+        for (int i = 0; i < damageParticleSystems.Length; i++)
         {
-            StopCoroutine(damageFlashCoroutine);
-        }
+            ParticleSystem damageParticleSystem = damageParticleSystems[i];
+            if (damageParticleSystem == null)
+            {
+                continue;
+            }
 
-        damageFlashCoroutine = StartCoroutine(DamageFlashRoutine());
+            GameObject particleSystemObject = damageParticleSystem.gameObject;
+            if (!particleSystemObject.activeSelf)
+            {
+                particleSystemObject.SetActive(true);
+            }
+
+            damageParticleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            damageParticleSystem.Clear(true);
+            damageParticleSystem.Play();
+        }
     }
 
     private void StopDamageFlash()
     {
-        if (damageFlashCoroutine != null)
+        damageFlashEffect?.Stop();
+    }
+
+    private void StopDamageParticles(bool clear)
+    {
+        if (damageParticleSystems == null || damageParticleSystems.Length == 0)
         {
-            StopCoroutine(damageFlashCoroutine);
-            damageFlashCoroutine = null;
+            return;
         }
 
-        if (spriteRenderer != null)
+        ParticleSystemStopBehavior stopBehavior = clear
+            ? ParticleSystemStopBehavior.StopEmittingAndClear
+            : ParticleSystemStopBehavior.StopEmitting;
+
+        for (int i = 0; i < damageParticleSystems.Length; i++)
         {
-            spriteRenderer.color = defaultSpriteColor;
+            ParticleSystem damageParticleSystem = damageParticleSystems[i];
+            if (damageParticleSystem == null)
+            {
+                continue;
+            }
+
+            GameObject particleSystemObject = damageParticleSystem.gameObject;
+            if (!particleSystemObject.activeSelf)
+            {
+                continue;
+            }
+
+            damageParticleSystem.Stop(true, stopBehavior);
+            if (clear)
+            {
+                damageParticleSystem.Clear(true);
+                particleSystemObject.SetActive(false);
+            }
         }
     }
 
-    private IEnumerator DamageFlashRoutine()
+    private void CacheDamageFlashRenderers()
     {
         if (spriteRenderer == null)
         {
-            yield break;
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         }
 
-        float duration = Mathf.Max(0f, damageFlashDuration);
-        float flashSpeed = Mathf.Max(0.01f, damageFlashSpeed);
-        float elapsed = 0f;
-
-        while (elapsed < duration)
+        SpriteRenderer[] flashRenderers = GetComponentsInChildren<SpriteRenderer>(true);
+        if (flashRenderers.Length == 0 && spriteRenderer != null)
         {
-            spriteRenderer.color = damageFlashColor;
-            yield return new WaitForSeconds(flashSpeed);
-            spriteRenderer.color = defaultSpriteColor;
-            yield return new WaitForSeconds(flashSpeed);
-            elapsed += flashSpeed * 2f;
+            flashRenderers = new[] { spriteRenderer };
         }
 
-        spriteRenderer.color = defaultSpriteColor;
-        damageFlashCoroutine = null;
+        damageFlashEffect ??= new SpriteDamageFlashEffect(this);
+        damageFlashEffect.CacheRenderers(flashRenderers);
+    }
+
+    private void CacheDamageParticleSystems()
+    {
+        damageParticleSystems = damageParticleSystems
+            .Where(particleSystem => particleSystem != null)
+            .Distinct()
+            .ToArray();
+
+        ConfigureDamageParticleSystems(damageParticleSystems);
+
+        if (damageParticleSystems.Length > 0)
+        {
+            return;
+        }
+
+        ParticleSystem[] discoveredParticleSystems = GetComponentsInChildren<ParticleSystem>(true);
+        if (discoveredParticleSystems == null || discoveredParticleSystems.Length == 0)
+        {
+            return;
+        }
+
+        List<ParticleSystem> namedDamageParticleSystems = new();
+        List<ParticleSystem> fallbackParticleSystems = new();
+
+        for (int i = 0; i < discoveredParticleSystems.Length; i++)
+        {
+            ParticleSystem particleSystem = discoveredParticleSystems[i];
+            if (particleSystem == null)
+            {
+                continue;
+            }
+
+            if (IsDamageParticleSystem(particleSystem.transform))
+            {
+                namedDamageParticleSystems.Add(particleSystem);
+                continue;
+            }
+
+            if (!particleSystem.main.loop)
+            {
+                fallbackParticleSystems.Add(particleSystem);
+            }
+        }
+
+        damageParticleSystems = (namedDamageParticleSystems.Count > 0
+                ? namedDamageParticleSystems
+                : fallbackParticleSystems)
+            .Distinct()
+            .ToArray();
+
+        ConfigureDamageParticleSystems(damageParticleSystems);
+    }
+
+    private bool IsDamageParticleSystem(Transform candidate)
+    {
+        Transform current = candidate;
+        while (current != null)
+        {
+            if (current == transform)
+            {
+                break;
+            }
+
+            if (current.name.IndexOf("damage", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                current.name.IndexOf("hit", StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+                return true;
+            }
+
+            current = current.parent;
+        }
+
+        return false;
+    }
+
+    private static void ConfigureDamageParticleSystems(IReadOnlyList<ParticleSystem> particleSystems)
+    {
+        if (particleSystems == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < particleSystems.Count; i++)
+        {
+            ParticleSystem particleSystem = particleSystems[i];
+            if (particleSystem == null)
+            {
+                continue;
+            }
+
+            ParticleSystem.MainModule main = particleSystem.main;
+            main.stopAction = ParticleSystemStopAction.None;
+            main.playOnAwake = false;
+        }
     }
 
     private void RegisterCollisionsWithOtherEnemies()
